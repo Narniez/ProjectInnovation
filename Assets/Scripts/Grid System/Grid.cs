@@ -15,7 +15,6 @@ public class Grid : MonoBehaviour
     public int height;
 
     public GameObject cube;
-
     public GameObject player;
 
     void Start()

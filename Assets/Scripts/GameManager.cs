@@ -19,12 +19,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!tankPlaced && playerTurn)
+        {
+            //Place Tank
+        }
         
     }
 
     void PlaceTank(GameObject node)
     {
         tankScript = playerTank.GetComponent<TankScript>();
-
     }
 }
