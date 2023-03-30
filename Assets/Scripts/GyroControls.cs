@@ -1,8 +1,10 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using System;
 
 public class GyroControls : MonoBehaviour
 {
+    public static event Action<GameObject> ObjectClicked;
+
     private Camera mainCamera;
 
     void Start()
@@ -24,7 +26,8 @@ public class GyroControls : MonoBehaviour
 
                 if (renderer != null)
                 {
-                    renderer.material.color = Random.ColorHSV();
+                    renderer.material.color = UnityEngine.Random.ColorHSV();
+                    ObjectClicked?.Invoke(clickedObject);
                 }
             }
         }
@@ -41,7 +44,8 @@ public class GyroControls : MonoBehaviour
 
                 if (renderer != null)
                 {
-                    renderer.material.color = Random.ColorHSV();
+                    renderer.material.color = UnityEngine.Random.ColorHSV();
+                    ObjectClicked?.Invoke(clickedObject);
                 }
             }
         }
