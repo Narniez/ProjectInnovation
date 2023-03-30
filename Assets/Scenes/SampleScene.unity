@@ -314,10 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8741afbdbf18c648ad82b30c0b50428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRayDistance: 100
-  layersToIgnore:
-    serializedVersion: 2
-    m_Bits: 0
+  movementSpeed: 4
 --- !u!1 &1820025884
 GameObject:
   m_ObjectHideFlags: 0
