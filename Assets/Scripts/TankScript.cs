@@ -133,7 +133,6 @@ public class TankScript : MonoBehaviour
         GyroControls.ObjectClicked -= OnObjectClicked;
     }
 
-
     public enum Direction
     {
         Up,
