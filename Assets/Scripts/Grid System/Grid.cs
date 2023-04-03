@@ -5,7 +5,7 @@ public class Grid : MonoBehaviour
 {
     public static Dictionary<Node, Vector3Int> nodesDictionary = new Dictionary<Node, Vector3Int>();
 
-    public Node[,] nodes;
+    public static Node[,] nodes;
 
     [Range(1, 100)]
     public float gapBetweenTheNodes;
@@ -18,7 +18,7 @@ public class Grid : MonoBehaviour
 
     public GameObject cube;
     public GameObject player;
-
+    public bool playerShoot = false;
     void Start()
     {
         nodes = new Node[rows, columns];
@@ -34,19 +34,24 @@ public class Grid : MonoBehaviour
                 //Vector3 cubePosition = nodes[row, column].position * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 0f, gapBetweenTheNodes / 2f);
                 //Instantiate the node object and get its Node component
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-                GameObject nodeObject = Instantiate(cube, nodePosition, Quaternion.identity);
+                GameObject nodeObject = Instantiate(cube, nodePosition, Quaternion.Euler(-90.0f,0f,0f));
                 Node node = nodeObject.GetComponent<Node>();
                 node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
+               
+        
 
                 //Assign the row and column of the node based on its position in the grid 
                 node.row = row;
                 node.column = column;
 
                 //Store the node in the nodes array
-                nodes[row, column] = node;
-
+                nodes[row, column] = node;               
                 node.OnClick.AddListener(() => ChangeNeighborColors(node));
-               
+                if (!playerShoot)
+                {
+                    Debug.Log("Change Mesh");
+                    node.OnClick.AddListener(() => node.DestroyNode(node));
+                }
             }
         }
 
@@ -83,19 +88,6 @@ public class Grid : MonoBehaviour
                 }
             }
         }
-
-
-
-        // Generate a random index within the nodes array bounds
-        int randomX = Random.Range(0, rows);
-        int randomY = Random.Range(0, columns);
-
-        // Set the player position to the position of the randomly selected node
-       // Vector3 nodePosition = nodes[randomX, randomY].position;
-
-        // Instantiate the player at the node position with an offset in the y direction
-        //Vector3 playerPosition = nodePosition * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 1f, gapBetweenTheNodes / 2f);
-        //Instantiate(player, playerPosition, Quaternion.identity);
     }
 
     void ChangeNeighborColors(Node clickedNode)

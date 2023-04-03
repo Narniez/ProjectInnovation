@@ -5,19 +5,23 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Node : MonoBehaviour
-{ 
+{
     public Vector3 position;
+    public bool isPlayerTurn = true;
     public bool damaged;
+    public bool isDestroyed = false;
+    public bool isScanned = false;
+    public bool isWalkable = true;
+    public GameObject occupyingObject = null;
+    public GameObject destroyedObjectPrefab;
     public int row;
     public int column;
     public List<Node> neighbours = new List<Node>();
 
-    public UnityEvent OnClick;
+    public Mesh destroyedNodeMesh;
+    public Material destroyedNodeMaterial;
 
-    public Node(Vector3 position, bool damaged) { 
-        this.position = position;
-        this.damaged = damaged;
-    }
+    public UnityEvent OnClick;
 
     public List<Node> GetNeighbours()
     {
@@ -32,9 +36,28 @@ public class Node : MonoBehaviour
         }
     }
 
+    public void DestroyNode(Node node)
+    {
+        node.isDestroyed = true;
+        node.isWalkable = false;
+        if (node.occupyingObject != null)
+        {
+            //node.occupyingObject.GetComponent<TankScript>().TakeHealth(node);
+            node.occupyingObject = null;
+            return;
+        }
+        MeshFilter meshFilter = node.GetComponent<MeshFilter>();
+        MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
+        Vector3 nodePosition = node.transform.position + new Vector3(5f, -1f, 0.0f);
+        Mesh destroyedMesh = Instantiate(destroyedNodeMesh);
+        meshFilter.mesh = destroyedMesh;
+
+        meshRendered.material = destroyedNodeMaterial;
+    }
+
     private void OnMouseDown()
     {
-        if(OnClick != null)
+        if (OnClick != null)
         {
             OnClick.Invoke();
         }

@@ -45,7 +45,7 @@ public class TankScript : MonoBehaviour
     {
         if (tankChosen)
         {
-            SetPosition(clickedObject.transform.position);
+            SetPosition(clickedObject.transform.position + new Vector3(-0.5f, 0f, 0.5f));
             currentNode = clickedObject.GetComponent<Node>();
             currentNode.GetComponent<Renderer>().material.color = Color.yellow;
             tankPlaced = true;
@@ -81,28 +81,28 @@ public class TankScript : MonoBehaviour
             switch (direction)
             {
                 case Direction.Up:
-                    if (node.row == currentNode.row + 1 && node.column == currentNode.column)
+                    if (node.row == currentNode.row + 1 && node.column == currentNode.column && node.isWalkable)
                     {
                         neighbourNode = node;
                     }
                     break;
 
                 case Direction.Down:
-                    if (node.row == currentNode.row - 1 && node.column == currentNode.column)
+                    if (node.row == currentNode.row - 1 && node.column == currentNode.column && node.isWalkable)
                     {
                         neighbourNode = node;
                     }
                     break;
 
                 case Direction.Right:
-                    if (node.column == currentNode.column + 1 && node.row == currentNode.row)
+                    if (node.column == currentNode.column + 1 && node.row == currentNode.row && node.isWalkable)
                     {
                         neighbourNode = node;
                     }
                     break;
 
                 case Direction.Left:
-                    if (node.column == currentNode.column - 1 && node.row == currentNode.row)
+                    if (node.column == currentNode.column - 1 && node.row == currentNode.row && node.isWalkable)
                     {
                         neighbourNode = node;
                     }
@@ -118,8 +118,8 @@ public class TankScript : MonoBehaviour
         if (neighbourNode != null)
         {
             currentNode = neighbourNode;
-            currentNode.GetComponent<Renderer>().material.color = Color.yellow;
-            transform.position = currentNode.gameObject.transform.position + new Vector3(0.0f, 1, 0.0f);
+            currentNode.GetComponent<Renderer>().materials[3].color = Color.yellow;
+            transform.position = currentNode.gameObject.transform.position + new Vector3(-0.5f, 0f, 0.5f);
         }
         else
         {
@@ -129,7 +129,7 @@ public class TankScript : MonoBehaviour
 
     public void SetPosition(Vector3 newVec)
     {
-        transform.localPosition = new Vector3(newVec.x, 2, newVec.z);
+        transform.localPosition = new Vector3(newVec.x, 0, newVec.z);
         GyroControls.ObjectClicked -= OnObjectClicked;
     }
 
