@@ -17,7 +17,7 @@ public class GyroControls : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Input.gyro.attitude.y);
+        //Debug.Log(Input.gyro.attitude.y);
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
