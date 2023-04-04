@@ -57,7 +57,7 @@ public class GyroControls : MonoBehaviour
 
     private void LateUpdate()
     {
-        //GyrohilikopterControl();
+        GyrohilikopterControl();
     }
 
     void GyrohilikopterControl()

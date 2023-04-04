@@ -36,6 +36,25 @@ public class Node : MonoBehaviour
         }
     }
 
+    //public void DestroyNode(Node node)
+    //{
+    //    node.isDestroyed = true;
+    //    node.isWalkable = false;
+    //    if (node.occupyingObject != null)
+    //    {
+    //        //node.occupyingObject.GetComponent<TankScript>().TakeHealth(node);
+    //        node.occupyingObject = null;
+    //        return;
+    //    }
+    //    MeshFilter meshFilter = node.GetComponent<MeshFilter>();
+    //    MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
+    //    Vector3 nodePosition = node.transform.position + new Vector3(5f, -1f, 0.0f);
+    //    Mesh destroyedMesh = Instantiate(destroyedNodeMesh);
+
+    //    meshFilter.mesh = destroyedMesh;
+    //    meshRendered.material = destroyedNodeMaterial;
+    //}
+
     public void DestroyNode(Node node)
     {
         node.isDestroyed = true;
@@ -46,19 +65,23 @@ public class Node : MonoBehaviour
             node.occupyingObject = null;
             return;
         }
+
+        // Instantiate destroyed node prefab
+        GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
+        destroyedNode.transform.SetParent(node.transform.parent);
+
+        // Disable original node mesh and renderer
         MeshFilter meshFilter = node.GetComponent<MeshFilter>();
         MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
-        Vector3 nodePosition = node.transform.position + new Vector3(5f, -1f, 0.0f);
-        Mesh destroyedMesh = Instantiate(destroyedNodeMesh);
-        meshFilter.mesh = destroyedMesh;
-
-        meshRendered.material = destroyedNodeMaterial;
+        meshFilter.gameObject.SetActive(false);
+        meshRendered.enabled = false;
     }
 
     private void OnMouseDown()
     {
         if (OnClick != null)
         {
+            Debug.Log("Called OnClick Method in Node class");
             OnClick.Invoke();
         }
     }
