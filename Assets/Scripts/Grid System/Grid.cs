@@ -17,8 +17,6 @@ public class Grid : MonoBehaviour
     public Vector3 nodePosition;
 
     public GameObject cube;
-
-    public List<GameObject> nodesPrefab;
     public GameObject player;
     public bool playerShoot = false;
     void Start()
@@ -35,10 +33,8 @@ public class Grid : MonoBehaviour
                 //Calculate the position of the node based on the row, column, and spacing
                 //Vector3 cubePosition = nodes[row, column].position * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 0f, gapBetweenTheNodes / 2f);
                 //Instantiate the node object and get its Node component
-                GameObject nodePrefab = nodesPrefab[Random.Range(0, nodesPrefab.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f,0f,0f));
-                
+                GameObject nodeObject = Instantiate(cube, nodePosition, Quaternion.Euler(-90.0f,0f,0f));
                 Node node = nodeObject.GetComponent<Node>();
                 node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
                
@@ -50,12 +46,12 @@ public class Grid : MonoBehaviour
 
                 //Store the node in the nodes array
                 nodes[row, column] = node;               
-                //When you click on a node change the color of all neighbours for easier testing
                 node.OnClick.AddListener(() => ChangeNeighborColors(node));
-
-                //When you click on a node destroy it and replace it with a destroyedNode asset
-                node.OnClick.AddListener(() => node.DestroyNode(node));
-               
+                if (!playerShoot)
+                {
+                    Debug.Log("Change Mesh");
+                    node.OnClick.AddListener(() => node.DestroyNode(node));
+                }
             }
         }
 
@@ -94,8 +90,6 @@ public class Grid : MonoBehaviour
         }
     }
 
-
-
     void ChangeNeighborColors(Node clickedNode)
     {
         var neihbours = clickedNode.GetNeighbours();
@@ -105,5 +99,4 @@ public class Grid : MonoBehaviour
             neighbour.GetComponent<Renderer>().material.color = Color.red;
         }
     }
-
 }
