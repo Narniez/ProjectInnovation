@@ -123,12 +123,12 @@ MonoBehaviour:
   isScanned: 0
   isWalkable: 1
   occupyingObject: {fileID: 0}
-  destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
+  destroyedObjectPrefab: {fileID: 0}
   row: 0
   column: 0
   neighbours: []
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
+  destroyedNodeMesh: {fileID: 7807538432633192378, guid: c207957f393e2694dac8c17ca5722f29, type: 3}
+  destroyedNodeMaterial: {fileID: 880774007180850119, guid: c207957f393e2694dac8c17ca5722f29, type: 3}
   OnClick:
     m_PersistentCalls:
       m_Calls: []

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //tankScript = playerTank.GetComponent<TankScript>();
+        tankScript = playerTank.GetComponent<TankScript>();
     }
 
     // Update is called once per frame
