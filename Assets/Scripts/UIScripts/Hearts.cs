@@ -31,16 +31,14 @@ public class Hearts : MonoBehaviour
     // Update is called once per frame
     void Update(){
         if (currentHealth <= maxHealth){
-            for (int i = 0; i < currentHealth; i++){
-                heartImages[i].SetActive(true);
-
-                // if (currentHealth % 1 == 0){
-                //     heartImages[heartImages.Count-1].SetActive(false);
-                // }
+            for (int i = 0; i < maxHealth; i++){
+                if (i < currentHealth){
+                    heartImages[i].SetActive(true);
+                } else {
+                    heartImages[i].SetActive(false);
+                }
             }
-            // for (int j = maxHealth-(int)currentHealth; j <= maxHealth; j++){
-            //     heartImages[j].SetActive(false);
-            // }
+            
         }
     }
 }
