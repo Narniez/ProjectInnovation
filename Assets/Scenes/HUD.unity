@@ -282,6 +282,8 @@ MonoBehaviour:
   - ispirovjr
   - Dovmindah
   player: {fileID: 7655396779091907033, guid: 37e42a73232ca1b4bb5405685a5f1a45, type: 3}
+  spriteExplosion: {fileID: -255697969, guid: ebc1024cb34bc0d4b8247d9960e3112d, type: 3}
+  spriteX: {fileID: 1643878046, guid: ebc1024cb34bc0d4b8247d9960e3112d, type: 3}
 --- !u!114 &119590856
 MonoBehaviour:
   m_ObjectHideFlags: 0
