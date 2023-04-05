@@ -14,6 +14,9 @@ public class PlayerList : MonoBehaviour
     public Sprite spriteX;
 
     List<GameObject> players = new List<GameObject>();
+    float time;
+    bool spacePressed = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +36,20 @@ public class PlayerList : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("space")){
-                StartCoroutine(WaitTime(5f));
+            time = Time.realtimeSinceStartup;
+            spacePressed = true;
+        }
+
+        if(spacePressed){
             for (int i = 0; i < players.Count; i ++){
                 players[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontStyle |= FontStyles.Strikethrough | FontStyles.Italic;
-
                 players[i].GetComponent<Image>().sprite = spriteExplosion;
-                players[i].GetComponent<Image>().sprite = spriteX;
+
+                
+                if(Time.realtimeSinceStartup - time >= 1){
+                    players[i].GetComponent<Image>().sprite = spriteX;
+                }
             }
         }
     }
-
-    private IEnumerator WaitTime(float time)
-    {
-        Debug.Log("Should wait: " + time + " seconds");
-        yield return new WaitForSeconds(time);
-    }
-    
 }
