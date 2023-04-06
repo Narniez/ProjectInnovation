@@ -42,12 +42,17 @@ public class PlayerList : MonoBehaviour
 
         if(spacePressed){
             for (int i = 0; i < players.Count; i ++){
-                players[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontStyle |= FontStyles.Strikethrough | FontStyles.Italic;
+                //The main part of the script starts from here
+                // players[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontStyle |= FontStyles.Strikethrough | FontStyles.Italic;
+                players[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "<s color=#FF0000>" + names[i] + "</s>";                
                 players[i].GetComponent<Image>().sprite = spriteExplosion;
 
                 
                 if(Time.realtimeSinceStartup - time >= 1){
                     players[i].GetComponent<Image>().sprite = spriteX;
+
+                    players[i].GetComponent<Image>().color = new Color(1f,1f,1f,0.5f);
+                    players[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(1f,1f,1f,0.5f);
                 }
             }
         }
