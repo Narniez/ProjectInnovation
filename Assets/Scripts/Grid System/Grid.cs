@@ -54,11 +54,8 @@ public class Grid : NetworkBehaviour
 
                 //Store the node in the nodes array
                 nodes[row, column] = node;
-                //When you click on a node change the color of all neighbours for easier testing
-                node.OnClick.AddListener(() => ChangeNeighborColors(node));
-
-                //When you click on a node destroy it and replace it with a destroyedNode asset
-                node.OnClick.AddListener(() => node.DestroyNode(node));
+                node.OnClick.AddListener(() => NodeScan(node));
+                NodeBehaviour(node);
             }
             //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
@@ -98,6 +95,29 @@ public class Grid : NetworkBehaviour
         }
     }
 
+    void NodeBehaviour(Node node) {
+        if (!IsOwner) return;
+        //When you click on a node change the color of all neighbours for easier testing
+        node.OnClick.AddListener(() => ChangeNeighborColors(node));
+
+        //When you click on a node destroy it and replace it with a destroyedNode asset
+        node.OnClick.AddListener(() => node.DestroyNode(node));
+    }
+
+    void NodeScan(Node clickedNode)
+    {
+        for (int column = 0; column < columns; column++)
+        {
+            Node node = nodes[clickedNode.row, column];
+            node.ScanNode();
+        }
+
+        for (int row = 0; row < rows; row++)
+        {
+            Node node = nodes[row, clickedNode.column];
+            node.ScanNode();
+        }
+    }
 
     void ChangeNeighborColors(Node clickedNode)
     {
