@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7076369953435599562}
   m_Layer: 0
   m_Name: des2
-  m_TagString: node
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,13 +64,13 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -4246479402191905792, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  - {fileID: 2840030550565390692, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  - {fileID: -2037787154250435360, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: 99656467281103303, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: -5358966903430282017, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
+  - {fileID: 2840030550565390692, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: -4578182139887140555, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: -1591851627909527165, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
+  - {fileID: -2037787154250435360, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   - {fileID: 725804396391725484, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
+  isPlayerTurn: 1
+  damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
@@ -114,6 +116,8 @@ MonoBehaviour:
   row: 0
   column: 0
   neighbours: []
+  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
+  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   OnClick:
     m_PersistentCalls:
       m_Calls: []

@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    public static Dictionary<Node, Vector3Int> nodesDictionary = new Dictionary<Node, Vector3Int>();
+
     public static Node[,] nodes;
+
     [Range(1, 100)]
     public float gapBetweenTheNodes;
     [Space]
@@ -26,9 +29,11 @@ public class Grid : MonoBehaviour
         {
             for (int column = 0; column < columns; column++)
             {
-  
+                //nodes[row, column] = new Node(new Vector3(row, 0, column), false);
+                //nodesDictionary.Add(nodes[row, column], new Vector3Int(row, 0, column));
+
                 //Calculate the position of the node based on the row, column, and spacing
-               
+                //Vector3 cubePosition = nodes[row, column].position * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 0f, gapBetweenTheNodes / 2f);
                 //Instantiate the node object and get its Node component
                 GameObject nodePrefab = nodesPrefab[Random.Range(0, nodesPrefab.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
@@ -37,6 +42,9 @@ public class Grid : MonoBehaviour
                 Node node = nodeObject.GetComponent<Node>();
                 node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
              
+
+
+
                 //Assign the row and column of the node based on its position in the grid 
                 node.row = row;
                 node.column = column;
@@ -44,11 +52,11 @@ public class Grid : MonoBehaviour
                 //Store the node in the nodes array
                 nodes[row, column] = node;               
                 //When you click on a node change the color of all neighbours for easier testing
-               // node.OnClick.AddListener(() => ChangeNeighborColors(node));
-                node.OnClick.AddListener(() => NodeScan(node));
+                node.OnClick.AddListener(() => ChangeNeighborColors(node));
 
                 //When you click on a node destroy it and replace it with a destroyedNode asset
                 //node.OnClick.AddListener(() => { if (TankScript.tankChosen) node.DestroyNode(node);});
+                node.OnClick.AddListener(() => node.DestroyNode(node));
             }
         }
 
@@ -87,10 +95,6 @@ public class Grid : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
 
     void NodeScan(Node clickedNode)
     {
@@ -113,7 +117,7 @@ public class Grid : MonoBehaviour
 
         foreach(var neighbour in neihbours)
         {
-            neighbour.GetComponent<Renderer>().materials[1].color = Color.red;
+            neighbour.GetComponent<Renderer>().material.color = Color.red;
         }
     }
 
