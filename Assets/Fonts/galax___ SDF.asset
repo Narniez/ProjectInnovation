@@ -85,8 +85,8 @@ MonoBehaviour:
     m_SubscriptOffset: -12.8
     m_SubscriptSize: 0.5
     m_UnderlineOffset: -9.152
-    m_UnderlineThickness: 1.28
-    m_StrikethroughOffset: 15.2
+    m_UnderlineThickness: 15
+    m_StrikethroughOffset: 30
     m_StrikethroughThickness: 1.28
     m_TabWidth: 23
   m_GlyphTable:
@@ -2692,5 +2692,5 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - _UnderlayColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_BuildTextureStacks: []
