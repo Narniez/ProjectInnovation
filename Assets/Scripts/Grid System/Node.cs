@@ -68,11 +68,7 @@ public class Node : NetworkBehaviour
         // Instantiate destroyed node prefab
         GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
         destroyedNode.transform.SetParent(node.transform.parent);
-        // Disable original node mesh and renderer
-        MeshFilter meshFilter = node.GetComponent<MeshFilter>();
-        MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
-        meshFilter.gameObject.SetActive(false);
-        meshRendered.enabled = false;
+        node.GetComponent<NetworkObject>().Despawn();
     }
 
     private void OnMouseDown()
