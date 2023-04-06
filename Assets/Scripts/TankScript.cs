@@ -1,12 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
 
-public class TankScript : MonoBehaviour
+public class TankScript : NetworkBehaviour
 {
     // Start is called before the first frame update
+    public Grid grid;
 
     public GameObject controlsPanel;
     private GameManager gameManager;
@@ -56,15 +56,8 @@ public class TankScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if (!IsOwner) return;
         tankPlaced = !ServerScript.instance.playerTurn.Value;
-=======
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            canMove = true;
-        }
->>>>>>> parent of cb854ee... Merge branch 'multitashak' into scanning
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
@@ -93,6 +86,7 @@ public class TankScript : MonoBehaviour
                     if (node.row == currentNode.row + 1 && node.column == currentNode.column && node.isWalkable)
                     {
                         neighbourNode = node;
+                        ServerScript.instance.playerTurn.Value = false;
                     }
                     break;
 
