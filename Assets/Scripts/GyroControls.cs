@@ -48,7 +48,7 @@ public class GyroControls : MonoBehaviour
 
                 if (renderer != null)
                 {
-                    renderer.material.color = UnityEngine.Random.ColorHSV();
+                   // renderer.material.color = UnityEngine.Random.ColorHSV();
                     ObjectClicked?.Invoke(clickedObject);
                 }
             }
