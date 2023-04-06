@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4212380630593987999}
   m_Layer: 0
   m_Name: des3
-  m_TagString: Untagged
+  m_TagString: node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,8 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  isPlayerTurn: 1
-  damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
@@ -112,8 +110,6 @@ MonoBehaviour:
   row: 0
   column: 0
   neighbours: []
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
   OnClick:
     m_PersistentCalls:
       m_Calls: []

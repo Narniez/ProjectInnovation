@@ -2156,7 +2156,7 @@ MonoBehaviour:
   - {fileID: 5822100615652470594, guid: e687619de628f8a49836d5f7bc42a910, type: 3}
   - {fileID: 2982482565741645871, guid: a2a4f6ebb55c9944baef4b23352bce86, type: 3}
   - {fileID: 6291811125823490665, guid: 07adb4df2b0c1e741a084d77ae5c99f6, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 7996633052552435243}
   playerShoot: 0
 --- !u!1 &2039897033
 GameObject:
@@ -2287,6 +2287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913568795019709007, guid: 2a7cca1588dc20c4e86b6495647da9af, type: 3}
+      propertyPath: canMove
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 913568795019709007, guid: 2a7cca1588dc20c4e86b6495647da9af, type: 3}
       propertyPath: controlsPanel
       value: 
