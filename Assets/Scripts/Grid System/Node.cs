@@ -1,10 +1,9 @@
-using JetBrains.Annotations;
-using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Node : MonoBehaviour
+public class Node : NetworkBehaviour
 {
     public Vector3 position;
     public bool isPlayerTurn = true;
@@ -69,35 +68,11 @@ public class Node : MonoBehaviour
         // Instantiate destroyed node prefab
         GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
         destroyedNode.transform.SetParent(node.transform.parent);
-    }
-
-    public void ScanNode()
-    {
-        this.isScanned = true;      
-        nodeColors = new Color[this.gameObject.GetComponent<Renderer>().materials.Length]; // initialize the nodeColors array with the same length as the array of materials
-
-        for (int i = 0; i < this.gameObject.GetComponent<Renderer>().materials.Length; i++)
-        {
-            nodeColors[i] = this.gameObject.GetComponent<Renderer>().materials[i].color;
-            this.gameObject.GetComponent<Renderer>().materials[i].color = Color.red;
-           
-        }
-        StartCoroutine(ResetColorCoroutine(this));
-        if (this.occupyingObject != null && this.occupyingObject.CompareTag("tank1"))
-        {
-            this.gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
-            Debug.Log("Player found on row " + this.row + " column: " + this.column);
-        }
-
-    }
-    private IEnumerator ResetColorCoroutine(Node node)
-    {
-        yield return new WaitForSeconds(1.5f);
-
-        for (int i = 0; i < nodeColors.Length; i++)
-        {
-            node.gameObject.GetComponent<Renderer>().materials[i].color = nodeColors[i];
-        }
+        // Disable original node mesh and renderer
+        MeshFilter meshFilter = node.GetComponent<MeshFilter>();
+        MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
+        meshFilter.gameObject.SetActive(false);
+        meshRendered.enabled = false;
     }
 
     private void OnMouseDown()
