@@ -69,6 +69,7 @@ public class Node : MonoBehaviour
         // Instantiate destroyed node prefab
         GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
         destroyedNode.transform.SetParent(node.transform.parent);
+        node.GetComponent<NetworkObject>().Despawn();
     }
 
     public void ScanNode()
