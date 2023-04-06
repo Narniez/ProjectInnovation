@@ -1,9 +1,10 @@
+using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
-using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Node : NetworkBehaviour
+public class Node : MonoBehaviour
 {
     public Vector3 position;
     public bool isDestroyed = false;
