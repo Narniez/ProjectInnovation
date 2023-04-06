@@ -1,10 +1,9 @@
-using JetBrains.Annotations;
-using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Node : MonoBehaviour
+public class Node : NetworkBehaviour
 {
     public Vector3 position;
     public bool isPlayerTurn = true;
@@ -69,7 +68,6 @@ public class Node : MonoBehaviour
         // Instantiate destroyed node prefab
         GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
         destroyedNode.transform.SetParent(node.transform.parent);
-
         // Disable original node mesh and renderer
         MeshFilter meshFilter = node.GetComponent<MeshFilter>();
         MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
