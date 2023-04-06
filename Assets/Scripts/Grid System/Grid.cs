@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using Unity.Netcode;
 using UnityEngine;
 
-public class Grid : NetworkBehaviour
+public class Grid : MonoBehaviour
 {
     public static Dictionary<Node, Vector3Int> nodesDictionary = new Dictionary<Node, Vector3Int>();
 
@@ -22,11 +21,8 @@ public class Grid : NetworkBehaviour
     public List<GameObject> nodesPrefab;
     public GameObject player;
     public bool playerShoot = false;
-
-    public override void OnNetworkSpawn()
+    void Start()
     {
-        if (!IsServer) return;
-
         nodes = new Node[rows, columns];
 
         for (int row = 0; row < rows; row++)
@@ -41,10 +37,11 @@ public class Grid : NetworkBehaviour
                 //Instantiate the node object and get its Node component
                 GameObject nodePrefab = nodesPrefab[Random.Range(0, nodesPrefab.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f, 0f, 0f), this.gameObject.transform);
-
+                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f,0f,0f));
+                
                 Node node = nodeObject.GetComponent<Node>();
                 node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
+             
 
 
 
@@ -53,28 +50,28 @@ public class Grid : NetworkBehaviour
                 node.column = column;
 
                 //Store the node in the nodes array
-                nodes[row, column] = node;
+                nodes[row, column] = node;               
                 //When you click on a node change the color of all neighbours for easier testing
                 node.OnClick.AddListener(() => ChangeNeighborColors(node));
 
                 //When you click on a node destroy it and replace it with a destroyedNode asset
+                //node.OnClick.AddListener(() => { if (TankScript.tankChosen) node.DestroyNode(node);});
                 node.OnClick.AddListener(() => node.DestroyNode(node));
             }
-            //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
 
         //Assign neighbours to each node
 
-        for (int row = 0; row < rows; row++)
+        for(int row = 0; row < rows; row++)
         {
-            for (int column = 0; column < columns; column++)
+            for(int column = 0; column < columns; column++)
             {
                 Node node = nodes[row, column];
 
                 //Check neighbouring nodes in all directions
-                for (int i = -1; i <= 1; i++)
+                for(int i = -1; i <= 1; i++)
                 {
-                    for (int j = -1; j <= 1; j++)
+                    for(int j = -1; j <= 1; j++)
                     {
                         //Skip the current node
                         if (i == 0 && j == 0)
@@ -99,11 +96,26 @@ public class Grid : NetworkBehaviour
     }
 
 
+    void NodeScan(Node clickedNode)
+    {
+        for(int column = 0; column < columns; column++)
+        {
+            Node node = nodes[clickedNode.row, column];
+            node.ScanNode();
+        }
+
+        for(int row = 0; row < rows; row++)
+        {
+            Node node = nodes[row, clickedNode.column];
+            node.ScanNode();
+        }
+    }
+
     void ChangeNeighborColors(Node clickedNode)
     {
         var neihbours = clickedNode.GetNeighbours();
 
-        foreach (var neighbour in neihbours)
+        foreach(var neighbour in neihbours)
         {
             neighbour.GetComponent<Renderer>().material.color = Color.red;
         }
