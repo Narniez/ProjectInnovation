@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5499454324429876156}
   - component: {fileID: -4051170418556750006}
   - component: {fileID: 1965042426273165123}
+  - component: {fileID: -1900404510512062632}
   m_Layer: 0
   m_Name: des5 (1)
   m_TagString: Untagged
@@ -130,3 +131,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019999998, y: 0.019999994, z: 0.0015422478}
   m_Center: {x: 0, y: 0, z: -0.00031870566}
+--- !u!114 &-1900404510512062632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291811125823490665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
