@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,30 +10,34 @@ public class TankScript : NetworkBehaviour
     // Start is called before the first frame update
     public Grid grid;
 
-    public GameObject controlsPanel;
-    private GameManager gameManager;
     bool tankChosen = false;
     public bool tankPlaced = false;
     Ray ray;
     RaycastHit hit;
 
-    Button rightButton;
-    Button leftButton;
-    Button upButton;
-    Button downButton;
-
     private Node currentNode;
-    private Vector3 targetPosition;
-    private int numMoves;
-    private bool canMove;
+    /// <summary>
+    /// PROMENI GO POSLE
+    /// </summary>
+    private int numMoves = 200;
+    public bool tankCanMove = false;
     private bool canMoveOnPhone;
 
+
+    public List<Node> newList = new List<Node>();
+
+
+    public override void OnNetworkSpawn()
+    {
+        if (IsOwnedByServer)
+            this.gameObject.transform.position = new Vector3(0.5f, 0, 0.5f);
+        if (IsClient && !IsOwnedByServer)
+            this.gameObject.transform.position = new Vector3(11.5f, 0, 11.5f);
+
+    }
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         GyroControls.ObjectClicked += OnObjectClicked;
-
-        controlsPanel.SetActive(false);
     }
 
     void OnObjectClicked(GameObject clickedObject)
@@ -43,7 +48,6 @@ public class TankScript : NetworkBehaviour
             currentNode = clickedObject.GetComponent<Node>();
             currentNode.GetComponent<Renderer>().material.color = Color.yellow;
             tankPlaced = true;
-            controlsPanel.SetActive(true);
         }
     }
 
@@ -56,26 +60,33 @@ public class TankScript : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            canMove = true;
+            tankCanMove = !tankCanMove;
         }
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("tank1"))
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Selected: " + hit.collider.gameObject.name);
-                tankChosen = true;
+                if (hit.collider.gameObject.tag == "Node")
+                {
+                    TankMoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                }
             }
-            if (canMove && canMoveOnPhone)
-            {
-                if (Input.GetTouch(0).phase == TouchPhase.Began)
-                    TankMove(hit);
+            //if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("tank1"))
+            //{
+            //    Debug.Log("Selected: " + hit.collider.gameObject.name);
+            //    tankChosen = true;
+            //}
+            //if (tankCanMove && canMoveOnPhone)
+            //{
+            //    if (Input.GetTouch(0).phase == TouchPhase.Began)
+            //        TankMove(hit);
 
-            }
-            if (canMove && Input.GetMouseButtonDown(0))
-            {
-                TankMove(hit);
-            }
+            //}
+            //if (tankCanMove && Input.GetMouseButtonDown(0))
+            //{
+            //    TankMove(hit);
+            //}
         }
     }
 
@@ -85,44 +96,50 @@ public class TankScript : NetworkBehaviour
         transform.localPosition = new Vector3(newVec.x, 0, newVec.z);
         GyroControls.ObjectClicked -= OnObjectClicked;
     }
-    public void TankMove(RaycastHit hit)
+
+    [ServerRpc]
+    public void TankMoveServerRpc(NetworkBehaviourReference selectedNode)
     {
-        if (numMoves > 0)
+        //Debug.Log("eeeee ma neska pih 2 pyti");
+
+        if (selectedNode.TryGet<Node>(out Node nodee))
         {
-            // Get a list of the neighbours of the current node
-            List<Node> neighbours = currentNode.GetNeighbours();
 
-            //Loop through each neighbouring node and check if it's next to the current node and not diagonal to it
-            foreach (Node node in neighbours)
+            if (numMoves > 0)
             {
-                // If the node is next to the current node, move to it
-                if (node.isWalkable && hit.transform.position == node.position && (node.row == currentNode.row || node.column == currentNode.column) && Mathf.Abs(node.row - currentNode.row) + Mathf.Abs(node.column - currentNode.column) == 1)
+                // Get a list of the neighbours of the current node
+                Node currentNode = nodee;
+                Debug.Log(currentNode + " ");
+                //List<Node> neighbours = currentNode.GetNeighbours();
+                List<Node> neighbours = currentNode.GetNeighbours();
+
+                //Loop through each neighbouring node and check if it's next to the current node and not diagonal to it
+                foreach (Node node in neighbours)
                 {
-                    currentNode.GetComponent<Renderer>().materials[1].color = Color.white;
-                    currentNode = node;
-                    currentNode.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                    transform.position = currentNode.gameObject.transform.position + new Vector3(-0.5f, 0f, 0.5f);
-                    currentNode.occupyingObject = gameObject;
-
-                    // Decrement the number of moves remaining
-                    numMoves--;
-
-                    // If there are no more moves remaining, disable the controls panel
-                    if (numMoves == 0)
+                    // If the node is next to the current node, move to it
+                    if (node.isWalkable && Vector3.Distance(nodee.transform.position, node.position) < 1.5f && (node.row == currentNode.row || 
+                        node.column == currentNode.column) && 
+                        Mathf.Abs(node.row - currentNode.row) + Mathf.Abs(node.column - currentNode.column) == 1)
                     {
+                        currentNode.GetComponent<Renderer>().materials[1].color = Color.white;
+                        nodee = node;
+                        currentNode.GetComponent<Renderer>().materials[1].color = Color.yellow;
+                        transform.position = currentNode.gameObject.transform.position + new Vector3(0.5f, 0f, 0.5f);
+                        currentNode.occupyingObject = gameObject;
+
+                        // Decrement the number of moves remaining
+                        numMoves--;
+
+                        // If there are no more moves remaining, disable the controls panel
+                        if (numMoves == 0)
+                        {
+                            break;
+                        }
+
                         break;
                     }
-
-                    break;
                 }
             }
         }
-    }
-    public enum Direction
-    {
-        Up,
-        Down,
-        Left,
-        Right
     }
 }

@@ -38,24 +38,6 @@ public class Node : NetworkBehaviour
         }
     }
 
-    //public void DestroyNode(Node node)
-    //{
-    //    node.isDestroyed = true;
-    //    node.isWalkable = false;
-    //    if (node.occupyingObject != null)
-    //    {
-    //        //node.occupyingObject.GetComponent<TankScript>().TakeHealth(node);
-    //        node.occupyingObject = null;
-    //        return;
-    //    }
-    //    MeshFilter meshFilter = node.GetComponent<MeshFilter>();
-    //    MeshRenderer meshRendered = node.GetComponent<MeshRenderer>();
-    //    Vector3 nodePosition = node.transform.position + new Vector3(5f, -1f, 0.0f);
-    //    Mesh destroyedMesh = Instantiate(destroyedNodeMesh);
-
-    //    meshFilter.mesh = destroyedMesh;
-    //    meshRendered.material = destroyedNodeMaterial;
-    //}
 
     public void DestroyNode(Node node)
     {
@@ -105,12 +87,13 @@ public class Node : NetworkBehaviour
     }
 
 
-    private void OnMouseDown()
-    {
-        if (OnClick != null)
-        {
-            Debug.Log("Called OnClick Method in Node class");
-            OnClick.Invoke();
-        }
-    }
+    //private void OnMouseDown()
+    //{
+    //    if (OnClick != null)
+    //    {
+    //        Debug.Log("Called OnClick Method in Node class");
+    //        OnClick?.Invoke();
+    //    }
+    //}
+
 }

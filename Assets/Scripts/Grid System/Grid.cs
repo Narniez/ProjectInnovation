@@ -1,6 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.Burst.CompilerServices;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Grid : NetworkBehaviour
 {
@@ -22,9 +26,14 @@ public class Grid : NetworkBehaviour
     public List<GameObject> nodesPrefab;
     public GameObject player;
     public bool playerShoot = false;
+    TankScript tank;
 
+    public static UnityAction onServerJoined;
+
+    List<Node> allNodes = new List<Node>();
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         if (!IsServer) return;
 
         nodes = new Node[rows, columns];
@@ -54,8 +63,14 @@ public class Grid : NetworkBehaviour
 
                 //Store the node in the nodes array
                 nodes[row, column] = node;
+
+                allNodes.Add(node);
+
                 node.OnClick.AddListener(() => NodeScan(node));
-                NodeBehaviour(node);
+                node.OnClick.AddListener(() => ChangeNeighborColors(node));
+
+                //When you click on a node destroy it and replace it with a destroyedNode asset
+                node.OnClick.AddListener(() => node.DestroyNode(node));
             }
             //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
@@ -95,36 +110,72 @@ public class Grid : NetworkBehaviour
         }
     }
 
-    void NodeBehaviour(Node node) {
-        if (!IsOwner) return;
-        //When you click on a node change the color of all neighbours for easier testing
-        node.OnClick.AddListener(() => ChangeNeighborColors(node));
+    [ServerRpc(RequireOwnership = false)]
+    void NodeBehaviourServerRpc(NetworkBehaviourReference node)
+    {
+        if (node.TryGet<Node>(out Node nodee))
+        {
+            //Destroy(nodee.gameObject);
+            NodeScan(nodee.gameObject.GetComponent<Node>());
 
-        //When you click on a node destroy it and replace it with a destroyedNode asset
-        node.OnClick.AddListener(() => node.DestroyNode(node));
+            Debug.Log("asdasdas");
+        }
     }
 
-    void NodeScan(Node clickedNode)
+    [ClientRpc]
+    void NodeBehaviourClientRpc(NetworkBehaviourReference node)
+    {
+        if (node.TryGet<Node>(out Node nodee))
+        {
+            //Destroy(nodee.gameObject);
+            NodeScan(nodee.gameObject.GetComponent<Node>());
+            Debug.Log("pdaspdpasdpaspdpas");
+        }
+    }
+
+    private void Update()
+    {
+        Ray ray;
+        RaycastHit hit;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider.gameObject.tag == "Node")
+                {
+                    if (!IsServer) { }
+                    //NodeBehaviourServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                    //NodeBehaviourClientRpc(hit.collider.gameObject.GetComponent<Node>());
+                }
+            }
+        }
+    }
+
+    public void NodeScan(Node clickedNode)
     {
         for (int column = 0; column < columns; column++)
         {
             Node node = nodes[clickedNode.row, column];
+            if(!node.isDestroyed)
             node.ScanNode();
         }
 
         for (int row = 0; row < rows; row++)
         {
             Node node = nodes[row, clickedNode.column];
+            if(!node.isDestroyed)
             node.ScanNode();
         }
     }
 
-    void ChangeNeighborColors(Node clickedNode)
+    public void ChangeNeighborColors(Node clickedNode)
     {
         var neihbours = clickedNode.GetNeighbours();
 
         foreach (var neighbour in neihbours)
         {
+            if(!neighbour.isDestroyed)
             neighbour.GetComponent<Renderer>().material.color = Color.red;
         }
     }
