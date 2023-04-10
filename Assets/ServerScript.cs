@@ -44,10 +44,6 @@ public class ServerScript : NetworkBehaviour
             Debug.Log("Debugni tuka neshto brat");
 
 
-
-
-
-
             EndTurn();
         }
         else

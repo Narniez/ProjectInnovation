@@ -1,100 +1,111 @@
 using System.Collections.Generic;
 using Unity.Netcode;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TankScript : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    public Grid grid;
 
     bool tankChosen = false;
-    public bool tankPlaced = false;
-    Ray ray;
-    RaycastHit hit;
+    public NetworkVariable<bool> tankPlaced = new(readPerm: NetworkVariableReadPermission.Everyone,
+        writePerm: NetworkVariableWritePermission.Server);
 
-    private Node currentNode;
+    public NetworkObject currentNode;
+
     /// <summary>
     /// PROMENI GO POSLE
     /// </summary>
     private int numMoves = 200;
     public bool tankCanMove = false;
-    private bool canMoveOnPhone;
 
 
-    public List<Node> newList = new List<Node>();
-
+    public Camera cam;
 
     public override void OnNetworkSpawn()
     {
         if (IsOwnedByServer)
+        {
             this.gameObject.transform.position = new Vector3(0.5f, 0, 0.5f);
+            //foreach (Transform child in transform)
+            //{
+            //    child.gameObject.layer = 6;
+            //}
+            //this.gameObject.layer = 6;
+            //Camera.main.cullingMask &= ~(1 << 7);
+        }
         if (IsClient && !IsOwnedByServer)
+        {
+
             this.gameObject.transform.position = new Vector3(11.5f, 0, 11.5f);
+            //foreach (Transform child in transform)
+            //{
+            //    child.gameObject.layer = 7;
+            //}
+            //this.gameObject.layer = 7;
+            //cam.cullingMask &= ~(1 << 6);
+        }
 
     }
     void Start()
     {
-        GyroControls.ObjectClicked += OnObjectClicked;
+        //GyroControls.ObjectClicked += OnObjectClicked;
     }
 
-    void OnObjectClicked(GameObject clickedObject)
-    {
-        if (tankChosen)
-        {
-            SetPosition(clickedObject.transform.position + new Vector3(-0.5f, 0f, 0.5f));
-            currentNode = clickedObject.GetComponent<Node>();
-            currentNode.GetComponent<Renderer>().material.color = Color.yellow;
-            tankPlaced = true;
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (!IsOwner) return;
-        tankPlaced = !ServerScript.instance.playerTurn.Value;
+        //tankPlaced = !ServerScript.instance.playerTurn.Value;
 
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (!tankPlaced.Value && Physics.Raycast(ray, out hit))
         {
-            tankCanMove = !tankCanMove;
-        }
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "Node")
             {
-                if (hit.collider.gameObject.tag == "Node")
-                {
-                    TankMoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                }
+                Debug.Log("Hit node! " + hit.collider.gameObject.tag);
+                FirstNodeServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                //SelectNodeServerRpc(hit.collider.gameObject.GetComponent<Node>().transform.position);
             }
-            //if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("tank1"))
-            //{
-            //    Debug.Log("Selected: " + hit.collider.gameObject.name);
-            //    tankChosen = true;
-            //}
-            //if (tankCanMove && canMoveOnPhone)
-            //{
-            //    if (Input.GetTouch(0).phase == TouchPhase.Began)
-            //        TankMove(hit);
+        }
 
-            //}
-            //if (tankCanMove && Input.GetMouseButtonDown(0))
-            //{
-            //    TankMove(hit);
-            //}
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
+        {
+            MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
         }
     }
 
-
-    public void SetPosition(Vector3 newVec)
+    [ServerRpc(RequireOwnership = false)]
+    void FirstNodeServerRpc(NetworkBehaviourReference curNode)
     {
-        transform.localPosition = new Vector3(newVec.x, 0, newVec.z);
-        GyroControls.ObjectClicked -= OnObjectClicked;
+        Debug.Log("Assign the current node!");
+
+        if (curNode.TryGet<Node>(out Node nodee))
+        {
+            currentNode = nodee.NetworkObject;
+            this.transform.position = currentNode.transform.position + new Vector3(0.5f, 0, 0.5f);
+            Debug.Log("First node assigned " + currentNode.name);
+            tankPlaced.Value = true;
+            Debug.Log("Cant no longer run this method!");
+        }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    void MoveServerRpc(NetworkBehaviourReference selectedNode)
+    {
+        Debug.Log("No current node");
+        //if (currentNode == null) return;
+
+        if (selectedNode.TryGet<Node>(out Node nodee))
+        {
+            Debug.Log(nodee.name);
+
+            if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1)
+            {
+                Debug.Log("Can move to this node");
+                currentNode = nodee.NetworkObject;
+                this.gameObject.transform.position = currentNode.transform.position + new Vector3(0.5f, 0, 0.5f);
+            }
+        }
     }
 
     [ServerRpc]
@@ -117,8 +128,8 @@ public class TankScript : NetworkBehaviour
                 foreach (Node node in neighbours)
                 {
                     // If the node is next to the current node, move to it
-                    if (node.isWalkable && Vector3.Distance(nodee.transform.position, node.position) < 1.5f && (node.row == currentNode.row || 
-                        node.column == currentNode.column) && 
+                    if (node.isWalkable && Vector3.Distance(nodee.transform.position, node.position) < 1.5f && (node.row == currentNode.row ||
+                        node.column == currentNode.column) &&
                         Mathf.Abs(node.row - currentNode.row) + Mathf.Abs(node.column - currentNode.column) == 1)
                     {
                         currentNode.GetComponent<Renderer>().materials[1].color = Color.white;

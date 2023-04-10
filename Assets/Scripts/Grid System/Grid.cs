@@ -29,13 +29,12 @@ public class Grid : NetworkBehaviour
     TankScript tank;
 
     public static UnityAction onServerJoined;
-
     List<Node> allNodes = new List<Node>();
+
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
         if (!IsServer) return;
-
         nodes = new Node[rows, columns];
 
         for (int row = 0; row < rows; row++)
@@ -108,8 +107,9 @@ public class Grid : NetworkBehaviour
                 }
             }
         }
-    }
 
+    }
+    
     [ServerRpc(RequireOwnership = false)]
     void NodeBehaviourServerRpc(NetworkBehaviourReference node)
     {
