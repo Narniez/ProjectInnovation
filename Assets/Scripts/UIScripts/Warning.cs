@@ -20,7 +20,7 @@ public class Warning : MonoBehaviour
     void Update()
     {
         generatedWarning.GetComponent<TextMeshProUGUI>().text = warningText;
-        if (Input.GetKeyDown("space")){
+        if (Input.GetKeyDown("w")){
             generatedWarning.transform.SetParent(transform);
         }
     }
