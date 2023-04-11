@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HUD_Tank_Mechanics
 guid: 3fc4ebb64760bf344878af6eb9fce278
+=======
+guid: c46422c1608d0934eb14b8401eb35a94
+>>>>>>> Explosion VFX
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
