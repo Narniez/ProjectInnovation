@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class TankScript : NetworkBehaviour
     public NetworkVariable<bool> tankPlaced = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
+
     public NetworkObject currentNode;
 
     /// <summary>
@@ -17,34 +19,38 @@ public class TankScript : NetworkBehaviour
     private int numMoves = 200;
     public bool tankCanMove = false;
 
-
+    /// <summary>
+    /// if isServer you are player1 and if !isServer and isClient you are player2.
+    /// player1 can move if the bool is true, player2 can move you the bool is false
+    /// </summary>
     public Camera cam;
 
     public override void OnNetworkSpawn()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         if (IsOwnedByServer)
         {
             this.gameObject.transform.position = new Vector3(0.5f, 0, 0.5f);
-            //foreach (Transform child in transform)
-            //{
-            //    child.gameObject.layer = 6;
-            //}
-            //this.gameObject.layer = 6;
-            //Camera.main.cullingMask &= ~(1 << 7);
+            foreach (Transform child in transform)
+            {
+                child.gameObject.layer = 6;
+            }
+            this.gameObject.layer = 6;
+            cam.cullingMask &= ~(1 << 7);
         }
         if (IsClient && !IsOwnedByServer)
         {
-
             this.gameObject.transform.position = new Vector3(11.5f, 0, 11.5f);
-            //foreach (Transform child in transform)
-            //{
-            //    child.gameObject.layer = 7;
-            //}
-            //this.gameObject.layer = 7;
-            //cam.cullingMask &= ~(1 << 6);
+            foreach (Transform child in transform)
+            {
+                child.gameObject.layer = 7;
+            }
+            this.gameObject.layer = 7;
+            cam.cullingMask &= ~(1 << 6);
         }
 
     }
+
     void Start()
     {
         //GyroControls.ObjectClicked += OnObjectClicked;
@@ -70,7 +76,20 @@ public class TankScript : NetworkBehaviour
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
         {
-            MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+            if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
+            {
+                Debug.Log("Player1 move");
+                MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                ChangeTurnLogicServerRpc();
+            }
+            if (IsClient && !IsOwnedByServer && ServerScript.instance.playerTurn.Value)
+            {
+                Debug.Log("Player1 move");
+                MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                ChangeTurnLogicServerRpc();
+
+
+            }
         }
     }
 
@@ -104,8 +123,21 @@ public class TankScript : NetworkBehaviour
                 Debug.Log("Can move to this node");
                 currentNode = nodee.NetworkObject;
                 this.gameObject.transform.position = currentNode.transform.position + new Vector3(0.5f, 0, 0.5f);
+
             }
         }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    void ChangeTurnLogicServerRpc() {
+        //StartCoroutine(TurnChange());
+        ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
+        Debug.Log(ServerScript.instance.playerTurn.Value);
+        Debug.Log("The turn has been changed");
+    }
+
+    IEnumerator TurnChange() {
+        yield return new WaitForSeconds(2f); 
     }
 
     [ServerRpc]
