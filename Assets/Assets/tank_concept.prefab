@@ -388,8 +388,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07616200663d40441a26768f2339a913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  tankPlaced: 0
+  tankPlaced:
+    m_InternalValue: 0
+  playerMoveable:
+    m_InternalValue: 1
   currentNode: {fileID: 0}
   tankCanMove: 0
   cam: {fileID: 6705120352378498509, guid: a23ffcf40c209504484cebceac62941b, type: 3}
@@ -422,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
-  SyncPositionY: 1
+  SyncPositionY: 0
   SyncPositionZ: 1
   SyncRotAngleX: 0
   SyncRotAngleY: 0

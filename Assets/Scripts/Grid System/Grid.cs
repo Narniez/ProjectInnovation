@@ -118,7 +118,6 @@ public class Grid : NetworkBehaviour
             //Destroy(nodee.gameObject);
             NodeScan(nodee.gameObject.GetComponent<Node>());
 
-            Debug.Log("asdasdas");
         }
     }
 
@@ -129,7 +128,6 @@ public class Grid : NetworkBehaviour
         {
             //Destroy(nodee.gameObject);
             NodeScan(nodee.gameObject.GetComponent<Node>());
-            Debug.Log("pdaspdpasdpaspdpas");
         }
     }
 
