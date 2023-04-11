@@ -11,6 +11,13 @@ public class TankScript : NetworkBehaviour
 
     public NetworkObject currentNode;
 
+    public Grid grid;
+
+    [SerializeField]
+    public Node[,] nodes;
+    public bool canShoot = false;
+    public bool canScan = false;
+
     /// <summary>
     /// PROMENI GO POSLE
     /// </summary>
@@ -47,6 +54,9 @@ public class TankScript : NetworkBehaviour
     }
     void Start()
     {
+        grid = FindAnyObjectByType<Grid>();
+        nodes = FindAnyObjectByType<Grid>().GetGridNodes();
+        Debug.Log("NODES IN NODES LIST IN TANK SCRIPT" + nodes[0, 1]);
         //GyroControls.ObjectClicked += OnObjectClicked;
     }
 
@@ -68,9 +78,29 @@ public class TankScript : NetworkBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value && !canShoot)
         {
             MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            canShoot = !canShoot;
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            canScan = !canScan;
+        }
+
+        if (Input.GetMouseButtonDown(0) && canScan && Physics.Raycast(ray, out hit))
+        {
+            NodeScan(hit.collider.gameObject.GetComponent<Node>());
+        }
+
+        if (Input.GetMouseButtonDown(0) && canShoot && Physics.Raycast(ray, out hit))
+        {
+            TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
         }
     }
 
@@ -99,7 +129,7 @@ public class TankScript : NetworkBehaviour
         {
             Debug.Log(nodee.name);
 
-            if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1)
+            if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1 && nodee.isWalkable)
             {
                 Debug.Log("Can move to this node");
                 currentNode = nodee.NetworkObject;
@@ -108,6 +138,35 @@ public class TankScript : NetworkBehaviour
         }
     }
 
+    public void NodeScan(NetworkBehaviourReference clickedNode)
+    {
+        if (clickedNode.TryGet<Node>(out Node nodeToScan))
+        {
+            for (int column = 0; column < grid.columns; column++)
+            {
+                Node node = nodes[nodeToScan.row, column];            
+                if (!nodeToScan.isDestroyed)
+                    node.ScanNodeServerRpc(nodeToScan);
+            }
+
+            for (int row = 0; row < grid.rows; row++)
+            {
+                Node node = nodes[row, nodeToScan.column];
+                if (!node.isDestroyed)
+                    node.ScanNodeServerRpc(nodeToScan);
+            }
+        }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TankShootServerRpc(NetworkBehaviourReference nodeToShoot)
+    {
+        if (nodeToShoot.TryGet<Node>(out Node node))
+        {  
+                Debug.Log("Shoooot" + node.name);
+                node.DestroyNode(node);          
+        }
+    }
     [ServerRpc]
     public void TankMoveServerRpc(NetworkBehaviourReference selectedNode)
     {

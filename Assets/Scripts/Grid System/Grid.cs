@@ -65,11 +65,11 @@ public class Grid : NetworkBehaviour
 
                 allNodes.Add(node);
 
-                node.OnClick.AddListener(() => NodeScan(node));
-                node.OnClick.AddListener(() => ChangeNeighborColors(node));
+               // node.OnClick.AddListener(() => NodeScan(node));
+                //node.OnClick.AddListener(() => ChangeNeighborColors(node));
 
                 //When you click on a node destroy it and replace it with a destroyedNode asset
-                node.OnClick.AddListener(() => node.DestroyNode(node));
+                //node.OnClick.AddListener(() => node.DestroyNode(node));
             }
             //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
@@ -133,6 +133,11 @@ public class Grid : NetworkBehaviour
         }
     }
 
+    public Node[,] GetGridNodes()
+    {
+        return nodes;
+    }
+
     private void Update()
     {
         Ray ray;
@@ -152,20 +157,23 @@ public class Grid : NetworkBehaviour
         }
     }
 
-    public void NodeScan(Node clickedNode)
+    public void NodeScan(NetworkBehaviourReference clickedNode)
     {
-        for (int column = 0; column < columns; column++)
+        if (clickedNode.TryGet<Node>(out Node nodeToScan))
         {
-            Node node = nodes[clickedNode.row, column];
-            if(!node.isDestroyed)
-            node.ScanNode();
-        }
+            for (int column = 0; column < columns; column++)
+            {
+                Node node = nodes[nodeToScan.row, column];
+                if (!nodeToScan.isDestroyed)
+                    node.ScanNodeServerRpc(nodeToScan);
+            }
 
-        for (int row = 0; row < rows; row++)
-        {
-            Node node = nodes[row, clickedNode.column];
-            if(!node.isDestroyed)
-            node.ScanNode();
+            for (int row = 0; row < rows; row++)
+            {
+                Node node = nodes[row, nodeToScan.column];
+                if (!node.isDestroyed)
+                    node.ScanNodeServerRpc(nodeToScan);
+            }
         }
     }
 

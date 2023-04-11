@@ -56,24 +56,27 @@ public class Node : NetworkBehaviour
         node.GetComponent<NetworkObject>().Despawn();
     }
 
-    public void ScanNode()
+    [ServerRpc(RequireOwnership = false)]
+    public void ScanNodeServerRpc(NetworkBehaviourReference nodeToScan)
     {
-        this.isScanned = true;
-        nodeColors = new Color[this.gameObject.GetComponent<Renderer>().materials.Length]; // initialize the nodeColors array with the same length as the array of materials
-
-        for (int i = 0; i < this.gameObject.GetComponent<Renderer>().materials.Length; i++)
+        if (nodeToScan.TryGet<Node>(out Node node))
         {
-            nodeColors[i] = this.gameObject.GetComponent<Renderer>().materials[i].color;
-            this.gameObject.GetComponent<Renderer>().materials[i].color = Color.red;
+            node.isScanned = true;
+            nodeColors = new Color[node.gameObject.GetComponent<Renderer>().materials.Length]; // initialize the nodeColors array with the same length as the array of materials
 
-        }
-        StartCoroutine(ResetColorCoroutine(this));
-        if (this.occupyingObject != null && this.occupyingObject.CompareTag("tank1"))
-        {
-            this.gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
-            Debug.Log("Player found on row " + this.row + " column: " + this.column);
-        }
+            for (int i = 0; i < node.gameObject.GetComponent<Renderer>().materials.Length; i++)
+            {
+                nodeColors[i] = node.gameObject.GetComponent<Renderer>().materials[i].color;
+                node.gameObject.GetComponent<Renderer>().materials[i].color = Color.red;
 
+            }
+            StartCoroutine(ResetColorCoroutine(this));
+            if (node.occupyingObject != null && node.occupyingObject.CompareTag("tank1"))
+            {
+                node.gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
+                Debug.Log("Player found on row " + this.row + " column: " + node.column);
+            }
+        }
     }
 
     private IEnumerator ResetColorCoroutine(Node node)
