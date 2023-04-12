@@ -14,7 +14,8 @@ public class Node : NetworkBehaviour
     public bool isScanned = false;
     private Color[] nodeColors;
     public bool isWalkable = true;
-    public GameObject occupyingObject = null;
+    public NetworkVariable<bool> isOccupied = new(false, readPerm: NetworkVariableReadPermission.Everyone,
+        writePerm: NetworkVariableWritePermission.Owner);
     public GameObject destroyedObjectPrefab;
     public int row;
     public int column;
@@ -43,52 +44,15 @@ public class Node : NetworkBehaviour
     {
         node.isDestroyed = true;
         node.isWalkable = false;
-        if (node.occupyingObject != null)
+
+        if (node.isOccupied.Value == false)
         {
-            //node.occupyingObject.GetComponent<TankScript>().TakeHealth(node);
-            node.occupyingObject = null;
-            return;
-        }
-
-        // Instantiate destroyed node prefab
-        GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
-        destroyedNode.transform.SetParent(node.transform.parent);
-        node.GetComponent<NetworkObject>().Despawn();
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void ScanNodeServerRpc(NetworkBehaviourReference nodeToScan)
-    {
-        if (nodeToScan.TryGet<Node>(out Node node))
-        {
-            node.isScanned = true;
-            nodeColors = new Color[node.gameObject.GetComponent<Renderer>().materials.Length]; // initialize the nodeColors array with the same length as the array of materials
-
-            for (int i = 0; i < node.gameObject.GetComponent<Renderer>().materials.Length; i++)
-            {
-                nodeColors[i] = node.gameObject.GetComponent<Renderer>().materials[i].color;
-                node.gameObject.GetComponent<Renderer>().materials[i].color = Color.red;
-
-            }
-            StartCoroutine(ResetColorCoroutine(this));
-            if (node.occupyingObject != null && node.occupyingObject.CompareTag("tank1"))
-            {
-                node.gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
-                Debug.Log("Player found on row " + this.row + " column: " + node.column);
-            }
+            // Instantiate destroyed node prefab
+            GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
+            destroyedNode.transform.SetParent(node.transform.parent);
+            node.GetComponent<NetworkObject>().Despawn();
         }
     }
-
-    private IEnumerator ResetColorCoroutine(Node node)
-    {
-        yield return new WaitForSeconds(1.5f);
-
-        for (int i = 0; i < nodeColors.Length; i++)
-        {
-            node.gameObject.GetComponent<Renderer>().materials[i].color = nodeColors[i];
-        }
-    }
-
 
     //private void OnMouseDown()
     //{

@@ -61,8 +61,7 @@ public class TankScript : NetworkBehaviour
     void Start()
     {
         grid = FindAnyObjectByType<Grid>();
-        nodes = FindAnyObjectByType<Grid>().GetGridNodes();
-        Debug.Log("NODES IN NODES LIST IN TANK SCRIPT" + nodes[0, 1]);
+        //Debug.Log("NODES IN NODES LIST IN TANK SCRIPT" + nodes[0, 1]);
         //GyroControls.ObjectClicked += OnObjectClicked;
     }
 
@@ -76,7 +75,7 @@ public class TankScript : NetworkBehaviour
 
         if (!tankPlaced.Value && Physics.Raycast(ray, out hit))
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "Node")
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("Node"))
             {
                 Debug.Log("Hit node! " + hit.collider.gameObject.tag);
                 FirstNodeServerRpc(hit.collider.gameObject.GetComponent<Node>());
@@ -84,7 +83,7 @@ public class TankScript : NetworkBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value && !canShoot)
+        if (!canShoot && Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
@@ -114,9 +113,8 @@ public class TankScript : NetworkBehaviour
 
         if (Input.GetMouseButtonDown(0) && canScan && Physics.Raycast(ray, out hit))
         {
-            NodeScan(hit.collider.gameObject.GetComponent<Node>());
+            NodeScan(hit.collider.gameObject);
         }
-
         if (Input.GetMouseButtonDown(0) && canShoot && Physics.Raycast(ray, out hit))
         {
             TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
@@ -151,30 +149,59 @@ public class TankScript : NetworkBehaviour
             if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1 && nodee.isWalkable)
             {
                 Debug.Log("Can move to this node");
+                nodee.isOccupied.Value = true;
                 currentNode = nodee.NetworkObject;
+                currentNode.GetComponent<Node>().isOccupied.Value = true;
                 this.gameObject.transform.position = currentNode.transform.position + new Vector3(0.5f, 0, 0.5f);
-
             }
         }
     }
 
-    public void NodeScan(NetworkBehaviourReference clickedNode)
+    public void NodeScan(GameObject objectHit)
     {
-        if (clickedNode.TryGet<Node>(out Node nodeToScan))
+        //RaycastHit hit;
+        RaycastHit[] hits;
+        Vector3[] directions = new Vector3[] { Vector3.right, Vector3.left, Vector3.forward, Vector3.back };
+        for (int i = 0; i < directions.Length; i++)
         {
-            for (int column = 0; column < grid.columns; column++)
-            {
-                Node node = nodes[nodeToScan.row, column];            
-                if (!nodeToScan.isDestroyed)
-                    node.ScanNodeServerRpc(nodeToScan);
-            }
+            hits = Physics.RaycastAll(objectHit.transform.position, directions[i], 100.0F);
 
-            for (int row = 0; row < grid.rows; row++)
+            for (int k = 0; k < hits.Length; k++)
             {
-                Node node = nodes[row, nodeToScan.column];
-                if (!node.isDestroyed)
-                    node.ScanNodeServerRpc(nodeToScan);
+                RaycastHit hit = hits[k];
+                if (hit.collider.gameObject.tag == "Node")
+                {
+                    Debug.Log("Node hit is " + hit.collider.gameObject.name + "Node position is " + hit.collider.gameObject.transform.position);
+                    Renderer renderer1 = hit.collider.gameObject.GetComponent<Renderer>();
+                    Material[] materials = renderer1.materials;
+                    Color[] originalColors = new Color[materials.Length];
+                    for (var m = 0; m < renderer1.materials.Length; m++)
+                    {
+                        if (hit.collider.gameObject.GetComponent<Node>().isOccupied.Value == false)
+                        {
+                            originalColors[m] = materials[m].color;
+                            renderer1.materials[m].color = Color.red;
+
+                        }
+                        else
+                        {
+                            originalColors[m] = materials[m].color;
+                            renderer1.materials[m].color = Color.blue;
+                        }
+                    }
+                    StartCoroutine(ResetColorsAfterDelay(materials, originalColors, 1.5f));
             }
+            }
+        }
+
+    }
+
+    IEnumerator ResetColorsAfterDelay(Material[] materials, Color[] originalColors, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        for (int i = 0; i < materials.Length; i++)
+        {
+            materials[i].color = originalColors[i]; // Reset color
         }
     }
 
@@ -182,66 +209,23 @@ public class TankScript : NetworkBehaviour
     public void TankShootServerRpc(NetworkBehaviourReference nodeToShoot)
     {
         if (nodeToShoot.TryGet<Node>(out Node node))
-        {  
-                Debug.Log("Shoooot" + node.name);
-                node.DestroyNode(node);          
+        {
+            Debug.Log("Shoooot" + node.name);
+            node.DestroyNode(node);
         }
     }
     [ServerRpc(RequireOwnership = false)]
-    void ChangeTurnLogicServerRpc() {
+    void ChangeTurnLogicServerRpc()
+    {
         //StartCoroutine(TurnChange());
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
         Debug.Log(ServerScript.instance.playerTurn.Value);
         Debug.Log("The turn has been changed");
     }
 
-    IEnumerator TurnChange() {
-        yield return new WaitForSeconds(2f); 
-    }
-
-    [ServerRpc]
-    public void TankMoveServerRpc(NetworkBehaviourReference selectedNode)
+    IEnumerator TurnChange()
     {
-        //Debug.Log("eeeee ma neska pih 2 pyti");
-
-        if (selectedNode.TryGet<Node>(out Node nodee))
-        {
-
-            if (numMoves > 0)
-            {
-                // Get a list of the neighbours of the current node
-                Node currentNode = nodee;
-                Debug.Log(currentNode + " ");
-                //List<Node> neighbours = currentNode.GetNeighbours();
-                List<Node> neighbours = currentNode.GetNeighbours();
-
-                //Loop through each neighbouring node and check if it's next to the current node and not diagonal to it
-                foreach (Node node in neighbours)
-                {
-                    // If the node is next to the current node, move to it
-                    if (node.isWalkable && Vector3.Distance(nodee.transform.position, node.position) < 1.5f && (node.row == currentNode.row ||
-                        node.column == currentNode.column) &&
-                        Mathf.Abs(node.row - currentNode.row) + Mathf.Abs(node.column - currentNode.column) == 1)
-                    {
-                        currentNode.GetComponent<Renderer>().materials[1].color = Color.white;
-                        nodee = node;
-                        currentNode.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                        transform.position = currentNode.gameObject.transform.position + new Vector3(0.5f, 0f, 0.5f);
-                        currentNode.occupyingObject = gameObject;
-
-                        // Decrement the number of moves remaining
-                        numMoves--;
-
-                        // If there are no more moves remaining, disable the controls panel
-                        if (numMoves == 0)
-                        {
-                            break;
-                        }
-
-                        break;
-                    }
-                }
-            }
-        }
+        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => true);
     }
 }
