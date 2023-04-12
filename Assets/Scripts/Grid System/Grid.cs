@@ -30,12 +30,10 @@ public class Grid : NetworkBehaviour
 
     public static UnityAction onServerJoined;
 
-    List<Node> allNodes = new List<Node>();
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
         if (!IsServer) return;
-
         nodes = new Node[rows, columns];
 
         for (int row = 0; row < rows; row++)
@@ -52,25 +50,21 @@ public class Grid : NetworkBehaviour
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
                 GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f, 0f, 0f), this.gameObject.transform);
                 nodeObject.gameObject.GetComponent<NetworkObject>().Spawn();
-                Node node = nodeObject.GetComponent<Node>();
-                node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-
-
+                NetworkObject node = nodeObject.GetComponent<NetworkObject>();
+                 node.gameObject.GetComponent<Node>().position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
 
                 //Assign the row and column of the node based on its position in the grid 
-                node.row = row;
-                node.column = column;
+                node.gameObject.GetComponent<Node>().row = row;
+                node.gameObject.GetComponent<Node>().column = column;
 
                 //Store the node in the nodes array
-                nodes[row, column] = node;
+                nodes[row, column] = node.gameObject.GetComponent<Node>();
 
-                allNodes.Add(node);
-
-                node.OnClick.AddListener(() => NodeScan(node));
-                node.OnClick.AddListener(() => ChangeNeighborColors(node));
+               // node.OnClick.AddListener(() => NodeScan(node));
+                //node.OnClick.AddListener(() => ChangeNeighborColors(node));
 
                 //When you click on a node destroy it and replace it with a destroyedNode asset
-                node.OnClick.AddListener(() => node.DestroyNode(node));
+                //node.OnClick.AddListener(() => node.DestroyNode(node));
             }
             //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
@@ -108,17 +102,16 @@ public class Grid : NetworkBehaviour
                 }
             }
         }
-    }
 
+    }
+    
     [ServerRpc(RequireOwnership = false)]
     void NodeBehaviourServerRpc(NetworkBehaviourReference node)
     {
         if (node.TryGet<Node>(out Node nodee))
         {
             //Destroy(nodee.gameObject);
-            NodeScan(nodee.gameObject.GetComponent<Node>());
 
-            Debug.Log("asdasdas");
         }
     }
 
@@ -127,10 +120,13 @@ public class Grid : NetworkBehaviour
     {
         if (node.TryGet<Node>(out Node nodee))
         {
-            //Destroy(nodee.gameObject);
-            NodeScan(nodee.gameObject.GetComponent<Node>());
-            Debug.Log("pdaspdpasdpaspdpas");
+            //Destroy(nodee.gameObject);       
         }
+    }
+
+    public Node[,] GetGridNodes()
+    {
+        return nodes;
     }
 
     private void Update()
@@ -152,22 +148,6 @@ public class Grid : NetworkBehaviour
         }
     }
 
-    public void NodeScan(Node clickedNode)
-    {
-        for (int column = 0; column < columns; column++)
-        {
-            Node node = nodes[clickedNode.row, column];
-            if(!node.isDestroyed)
-            node.ScanNode();
-        }
-
-        for (int row = 0; row < rows; row++)
-        {
-            Node node = nodes[row, clickedNode.column];
-            if(!node.isDestroyed)
-            node.ScanNode();
-        }
-    }
 
     public void ChangeNeighborColors(Node clickedNode)
     {
