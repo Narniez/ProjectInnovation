@@ -22,7 +22,7 @@ public class TankScript : NetworkBehaviour
 
     private bool tankChosen = false;
 
-    public NetworkVariable<int> tankHealth = new(3,readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<int> tankHealth = new(3, readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
     private int numMoves = 200;
     private GameObject[] cam;
@@ -147,7 +147,7 @@ public class TankScript : NetworkBehaviour
 
         if (Input.GetMouseButtonDown(0) && canScan && Physics.Raycast(ray, out hit))
         {
-            NodeScan(hit.collider.gameObject);
+            NodeScanServerRpc(hit.collider.gameObject.GetComponent<Node>());
         }
 
         //if (Input.GetMouseButtonDown(0) && canShoot && Physics.Raycast(ray, out hit))
@@ -177,26 +177,6 @@ public class TankScript : NetworkBehaviour
         }
     }
 
-    public void NodeScan(NetworkBehaviourReference clickedNode)
-    {
-        if (clickedNode.TryGet<Node>(out Node nodeToScan))
-        {
-            for (int column = 0; column < grid.columns; column++)
-            {
-                Node node = nodes[nodeToScan.row, column];
-                if (!nodeToScan.isDestroyed)
-                    node.ScanNodeServerRpc(nodeToScan);
-            }
-
-            for (int row = 0; row < grid.rows; row++)
-            {
-                Node node = nodes[row, nodeToScan.column];
-                if (!node.isDestroyed)
-                    node.ScanNodeServerRpc(nodeToScan);
-            }
-        }
-    }
-
     [ServerRpc(RequireOwnership = false)]
     void FirstNodeServerRpc(NetworkBehaviourReference curNode)
     {
@@ -210,7 +190,7 @@ public class TankScript : NetworkBehaviour
             Debug.Log("First node assigned " + currentNode.name);
             tankPlaced.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
-                Debug.Log("Cant no longer run this method!");
+            Debug.Log("Cant no longer run this method!");
         }
     }
 
@@ -241,20 +221,12 @@ public class TankScript : NetworkBehaviour
             }
         }
     }
-    
-    public void NodeScan(GameObject objectHit)
+
     [ServerRpc(RequireOwnership = false)]
     public void TankShootServerRpc(NetworkBehaviourReference nodeToShoot)
     {
-        //RaycastHit hit;
-        RaycastHit[] hits;
-        Vector3[] directions = new Vector3[] { Vector3.right, Vector3.left, Vector3.forward, Vector3.back };
-        for (int i = 0; i < directions.Length; i++)
         if (nodeToShoot.TryGet<Node>(out Node node))
         {
-            hits = Physics.RaycastAll(objectHit.transform.position, directions[i], 100.0F);
-
-            for (int k = 0; k < hits.Length; k++)
             Debug.Log("Shoooot" + node.name);
             if (node.isOccupied.Value)
             {
@@ -264,34 +236,59 @@ public class TankScript : NetworkBehaviour
             }
             else
             {
-                RaycastHit hit = hits[k];
-                if (hit.collider.gameObject.tag == "Node")
-                {
-                    Debug.Log("Node hit is " + hit.collider.gameObject.name + "Node position is " + hit.collider.gameObject.transform.position);
-                    Renderer renderer1 = hit.collider.gameObject.GetComponent<Renderer>();
-                    Material[] materials = renderer1.materials;
-                    Color[] originalColors = new Color[materials.Length];
-                    for (var m = 0; m < renderer1.materials.Length; m++)
-                    {
-                        if (hit.collider.gameObject.GetComponent<Node>().isOccupied.Value == false)
-                        {
-                            originalColors[m] = materials[m].color;
-                            renderer1.materials[m].color = Color.red;
-
-                        }
-                        else
-                        {
-                            originalColors[m] = materials[m].color;
-                            renderer1.materials[m].color = Color.blue;
-                        }
-                    }
-                    StartCoroutine(ResetColorsAfterDelay(materials, originalColors, 1.5f));
                 node.DestroyNode(node);
                 canShoot = false;
             }
+
+        }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void NodeScanServerRpc(NetworkBehaviourReference objectHit)
+    {
+        if (objectHit.TryGet<Node>(out Node nodeToScan))
+        {
+            //RaycastHit hit;
+            RaycastHit[] hits;
+            Vector3[] directions = new Vector3[] { Vector3.right, Vector3.left, Vector3.forward, Vector3.back };
+
+
+            for (int i = 0; i < directions.Length; i++)
+
+            {
+                hits = Physics.RaycastAll(nodeToScan.transform.position, directions[i], 100.0F);
+
+                for (int k = 0; k < hits.Length; k++)
+
+                {
+                    RaycastHit hit = hits[k];
+                    if (hit.collider.gameObject.tag == "Node")
+                    {
+                        Debug.Log("Node hit is " + hit.collider.gameObject.name + "Node position is " + hit.collider.gameObject.transform.position);
+                        Renderer renderer1 = hit.collider.gameObject.GetComponent<Renderer>();
+                        Material[] materials = renderer1.materials;
+                        Color[] originalColors = new Color[materials.Length];
+                        for (var m = 0; m < renderer1.materials.Length; m++)
+                        {
+                            if (hit.collider.gameObject.GetComponent<Node>().isOccupied.Value == false)
+                            {
+                                originalColors[m] = materials[m].color;
+                                renderer1.materials[m].color = Color.red;
+
+                            }
+                            else
+                            {
+                                originalColors[m] = materials[m].color;
+                                renderer1.materials[m].color = Color.blue;
+                            }
+                        }
+                        StartCoroutine(ResetColorsAfterDelay(materials, originalColors, 1.5f));
+                    }
+
+                }
+
             }
         }
-
     }
 
     IEnumerator ResetColorsAfterDelay(Material[] materials, Color[] originalColors, float delay)
@@ -302,25 +299,11 @@ public class TankScript : NetworkBehaviour
             materials[i].color = originalColors[i]; // Reset color
         }
     }
-
     [ServerRpc(RequireOwnership = false)]
     void ChangeTurnLogicServerRpc()
     {
-        if (nodeToShoot.TryGet<Node>(out Node node))
-        {
-            Debug.Log("Shoooot" + node.name);
-            node.DestroyNode(node);
-        }
-    }
-    [ServerRpc(RequireOwnership = false)]
-    void ChangeTurnLogicServerRpc()
-    {
-        //StartCoroutine(TurnChange());
-        ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
-        Debug.Log(ServerScript.instance.playerTurn.Value);
         StartCoroutine(TurnChange());
-
-        Debug.Log("The turn has been changed");
+     
     }
 
     IEnumerator TurnChange()
