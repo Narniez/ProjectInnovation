@@ -27,9 +27,15 @@ public class Grid : NetworkBehaviour
     public GameObject player;
     public bool playerShoot = false;
     TankScript tank;
+<<<<<<< HEAD
+
+    public static UnityAction onServerJoined;
+=======
+>>>>>>> main
 
     public static UnityAction onServerJoined;
 
+    List<Node> allNodes = new List<Node>();
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
@@ -58,6 +64,7 @@ public class Grid : NetworkBehaviour
                 node.gameObject.GetComponent<Node>().column = column;
 
                 //Store the node in the nodes array
+<<<<<<< HEAD
                 nodes[row, column] = node.gameObject.GetComponent<Node>();
 
                // node.OnClick.AddListener(() => NodeScan(node));
@@ -65,6 +72,17 @@ public class Grid : NetworkBehaviour
 
                 //When you click on a node destroy it and replace it with a destroyedNode asset
                 //node.OnClick.AddListener(() => node.DestroyNode(node));
+=======
+                nodes[row, column] = node;
+
+                allNodes.Add(node);
+
+                node.OnClick.AddListener(() => NodeScan(node));
+                node.OnClick.AddListener(() => ChangeNeighborColors(node));
+
+                //When you click on a node destroy it and replace it with a destroyedNode asset
+                node.OnClick.AddListener(() => node.DestroyNode(node));
+>>>>>>> main
             }
             //this.gameObject.GetComponent<NetworkObject>().Spawn();
         }
@@ -103,15 +121,28 @@ public class Grid : NetworkBehaviour
             }
         }
 
+<<<<<<< HEAD
     }
     
+=======
+>>>>>>> main
     [ServerRpc(RequireOwnership = false)]
     void NodeBehaviourServerRpc(NetworkBehaviourReference node)
     {
         if (node.TryGet<Node>(out Node nodee))
         {
             //Destroy(nodee.gameObject);
+<<<<<<< HEAD
 
+        }
+    }
+
+    [ClientRpc]
+    void NodeBehaviourClientRpc(NetworkBehaviourReference node)
+=======
+            NodeScan(nodee.gameObject.GetComponent<Node>());
+
+            Debug.Log("asdasdas");
         }
     }
 
@@ -120,13 +151,10 @@ public class Grid : NetworkBehaviour
     {
         if (node.TryGet<Node>(out Node nodee))
         {
-            //Destroy(nodee.gameObject);       
+            //Destroy(nodee.gameObject);
+            NodeScan(nodee.gameObject.GetComponent<Node>());
+            Debug.Log("pdaspdpasdpaspdpas");
         }
-    }
-
-    public Node[,] GetGridNodes()
-    {
-        return nodes;
     }
 
     private void Update()
@@ -148,7 +176,55 @@ public class Grid : NetworkBehaviour
         }
     }
 
+    public void NodeScan(Node clickedNode)
+>>>>>>> main
+    {
+        if (node.TryGet<Node>(out Node nodee))
+        {
+<<<<<<< HEAD
+            //Destroy(nodee.gameObject);       
+=======
+            Node node = nodes[clickedNode.row, column];
+            if(!node.isDestroyed)
+            node.ScanNode();
+>>>>>>> main
+        }
+    }
 
+    public Node[,] GetGridNodes()
+    {
+        return nodes;
+    }
+
+    private void Update()
+    {
+        Ray ray;
+        RaycastHit hit;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+<<<<<<< HEAD
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider.gameObject.tag == "Node")
+                {
+                    if (!IsServer) { }
+                    //NodeBehaviourServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                    //NodeBehaviourClientRpc(hit.collider.gameObject.GetComponent<Node>());
+                }
+            }
+        }
+    }
+
+
+=======
+            Node node = nodes[row, clickedNode.column];
+            if(!node.isDestroyed)
+            node.ScanNode();
+        }
+    }
+
+>>>>>>> main
     public void ChangeNeighborColors(Node clickedNode)
     {
         var neihbours = clickedNode.GetNeighbours();
