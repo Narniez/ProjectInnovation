@@ -8,12 +8,16 @@ using UnityEngine.Events;
 public class Node : NetworkBehaviour
 {
     public Vector3 position;
+
     public bool isPlayerTurn = true;
     public bool damaged;
     public bool isDestroyed = false;
     public bool isScanned = false;
-    private Color[] nodeColors;
     public bool isWalkable = true;
+    public NetworkVariable<bool> isOccupied = new(false, readPerm: NetworkVariableReadPermission.Everyone, 
+        writePerm: NetworkVariableWritePermission.Owner);
+
+
     public GameObject occupyingObject = null;
     public GameObject destroyedObjectPrefab;
     public int row;
@@ -24,6 +28,9 @@ public class Node : NetworkBehaviour
     public Material destroyedNodeMaterial;
 
     public UnityEvent OnClick;
+
+    private Color[] nodeColors;
+
 
     public List<Node> GetNeighbours()
     {
