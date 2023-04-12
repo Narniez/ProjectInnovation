@@ -44,50 +44,8 @@ public class Node : NetworkBehaviour
         }
     }
 
-<<<<<<< HEAD
     [ServerRpc(RequireOwnership = false)]
     public void DestroyNodeServerRpc(NetworkBehaviourReference node)
-=======
-
-    public void DestroyNode(Node node)
-    {
-        node.isDestroyed = true;
-        node.isWalkable = false;
-        if (node.occupyingObject != null)
-        {
-            //node.occupyingObject.GetComponent<TankScript>().TakeHealth(node);
-            node.occupyingObject = null;
-            return;
-        }
-
-        // Instantiate destroyed node prefab
-        GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
-        destroyedNode.transform.SetParent(node.transform.parent);
-        node.GetComponent<NetworkObject>().Despawn();
-    }
-
-    public void ScanNode()
-    {
-        this.isScanned = true;
-        nodeColors = new Color[this.gameObject.GetComponent<Renderer>().materials.Length]; // initialize the nodeColors array with the same length as the array of materials
-
-        for (int i = 0; i < this.gameObject.GetComponent<Renderer>().materials.Length; i++)
-        {
-            nodeColors[i] = this.gameObject.GetComponent<Renderer>().materials[i].color;
-            this.gameObject.GetComponent<Renderer>().materials[i].color = Color.red;
-
-        }
-        StartCoroutine(ResetColorCoroutine(this));
-        if (this.occupyingObject != null && this.occupyingObject.CompareTag("tank1"))
-        {
-            this.gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
-            Debug.Log("Player found on row " + this.row + " column: " + this.column);
-        }
-
-    }
-
-    private IEnumerator ResetColorCoroutine(Node node)
->>>>>>> main
     {
         if (node.TryGet<Node>(out Node nodee))
         {
@@ -113,16 +71,4 @@ public class Node : NetworkBehaviour
     //    }
     //}
 
-<<<<<<< HEAD
-=======
-    //private void OnMouseDown()
-    //{
-    //    if (OnClick != null)
-    //    {
-    //        Debug.Log("Called OnClick Method in Node class");
-    //        OnClick?.Invoke();
-    //    }
-    //}
-
->>>>>>> main
 }

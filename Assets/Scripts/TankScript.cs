@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.Netcode;
-<<<<<<< HEAD
 using Unity.VisualScripting.Antlr3.Runtime;
-=======
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
->>>>>>> main
 using UnityEngine;
 
 public class TankScript : NetworkBehaviour
@@ -24,7 +19,6 @@ public class TankScript : NetworkBehaviour
 
     public Grid grid;
 
-<<<<<<< HEAD
     public NetworkObject currentNode;
     public NetworkVariable<bool> tankPlaced = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
@@ -39,44 +33,12 @@ public class TankScript : NetworkBehaviour
     private GameObject[] cam;
 
     public bool hasShooted;
-=======
-    bool tankChosen = false;
-    public bool tankPlaced = false;
-    Ray ray;
-    RaycastHit hit;
-
-    private Node currentNode;
-    /// <summary>
-    /// PROMENI GO POSLE
-    /// </summary>
-    private int numMoves = 200;
-    public bool tankCanMove = false;
-    private bool canMoveOnPhone;
-
-
-    public List<Node> newList = new List<Node>();
-
-
-    public override void OnNetworkSpawn()
-    {
-        if (IsOwnedByServer)
-            this.gameObject.transform.position = new Vector3(0.5f, 0, 0.5f);
-        if (IsClient && !IsOwnedByServer)
-            this.gameObject.transform.position = new Vector3(11.5f, 0, 11.5f);
-
-    }
-    void Start()
-    {
-        GyroControls.ObjectClicked += OnObjectClicked;
-    }
->>>>>>> main
 
     public override void OnNetworkSpawn()
     {
         cam = GameObject.FindGameObjectsWithTag("MainCamera");
         if (IsOwnedByServer)
         {
-<<<<<<< HEAD
             this.gameObject.transform.position = new Vector3(0.5f, 0, 0.5f);
             foreach (Transform child in transform)
             {
@@ -98,12 +60,6 @@ public class TankScript : NetworkBehaviour
                 Camera.main.cullingMask &= ~(1 << 6);
                 Camera.main.cullingMask |= (1 << 7);
             }
-=======
-            SetPosition(clickedObject.transform.position + new Vector3(-0.5f, 0f, 0.5f));
-            currentNode = clickedObject.GetComponent<Node>();
-            currentNode.GetComponent<Renderer>().material.color = Color.yellow;
-            tankPlaced = true;
->>>>>>> main
         }
     }
 
@@ -125,21 +81,16 @@ public class TankScript : NetworkBehaviour
 
         if (!tankPlaced.Value && Physics.Raycast(ray, out hit))
         {
-<<<<<<< HEAD
             if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("Node"))
             {
                 Debug.Log("Hit node! " + hit.collider.gameObject.tag);
                 FirstNodeServerRpc(hit.collider.gameObject.GetComponent<Node>());
                 //SelectNodeServerRpc(hit.collider.gameObject.GetComponent<Node>().transform.position);
             }
-=======
-            tankCanMove = !tankCanMove;
->>>>>>> main
         }
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
         {
-<<<<<<< HEAD
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
@@ -275,30 +226,7 @@ public class TankScript : NetworkBehaviour
                 canShoot.Value = true;
                 Debug.Log(hasMoved); 
                 Debug.Log(canShoot);
-=======
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (hit.collider.gameObject.tag == "Node")
-                {
-                    TankMoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                }
->>>>>>> main
             }
-            //if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("tank1"))
-            //{
-            //    Debug.Log("Selected: " + hit.collider.gameObject.name);
-            //    tankChosen = true;
-            //}
-            //if (tankCanMove && canMoveOnPhone)
-            //{
-            //    if (Input.GetTouch(0).phase == TouchPhase.Began)
-            //        TankMove(hit);
-
-            //}
-            //if (tankCanMove && Input.GetMouseButtonDown(0))
-            //{
-            //    TankMove(hit);
-            //}
         }
     }
 
@@ -323,7 +251,6 @@ public class TankScript : NetworkBehaviour
         }
     }
 
-<<<<<<< HEAD
     [ServerRpc(RequireOwnership = false)]
     public void NodeScanServerRpc(NetworkBehaviourReference objectHit)
     {
@@ -366,55 +293,11 @@ public class TankScript : NetworkBehaviour
                         StartCoroutine(ResetColorsAfterDelay(materials, originalColors, 1.5f));
                     }
 
-=======
-    [ServerRpc]
-    public void TankMoveServerRpc(NetworkBehaviourReference selectedNode)
-    {
-        //Debug.Log("eeeee ma neska pih 2 pyti");
-
-        if (selectedNode.TryGet<Node>(out Node nodee))
-        {
-
-            if (numMoves > 0)
-            {
-                // Get a list of the neighbours of the current node
-                Node currentNode = nodee;
-                Debug.Log(currentNode + " ");
-                //List<Node> neighbours = currentNode.GetNeighbours();
-                List<Node> neighbours = currentNode.GetNeighbours();
-
-                //Loop through each neighbouring node and check if it's next to the current node and not diagonal to it
-                foreach (Node node in neighbours)
-                {
-                    // If the node is next to the current node, move to it
-                    if (node.isWalkable && Vector3.Distance(nodee.transform.position, node.position) < 1.5f && (node.row == currentNode.row || 
-                        node.column == currentNode.column) && 
-                        Mathf.Abs(node.row - currentNode.row) + Mathf.Abs(node.column - currentNode.column) == 1)
-                    {
-                        currentNode.GetComponent<Renderer>().materials[1].color = Color.white;
-                        nodee = node;
-                        currentNode.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                        transform.position = currentNode.gameObject.transform.position + new Vector3(0.5f, 0f, 0.5f);
-                        currentNode.occupyingObject = gameObject;
-
-                        // Decrement the number of moves remaining
-                        numMoves--;
-
-                        // If there are no more moves remaining, disable the controls panel
-                        if (numMoves == 0)
-                        {
-                            break;
-                        }
-
-                        break;
-                    }
->>>>>>> main
                 }
 
             }
         }
     }
-<<<<<<< HEAD
 
     IEnumerator ResetColorsAfterDelay(Material[] materials, Color[] originalColors, float delay)
     {
@@ -447,6 +330,4 @@ public class TankScript : NetworkBehaviour
         if (health <= 0)
             Debug.Log("The tank is destroyed");
     }
-=======
->>>>>>> main
 }
