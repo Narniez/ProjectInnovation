@@ -4,6 +4,7 @@ using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR;
 
 public class Node : NetworkBehaviour
 {
@@ -43,18 +44,21 @@ public class Node : NetworkBehaviour
         }
     }
 
-
-    public void DestroyNode(Node node)
+    [ServerRpc(RequireOwnership = false)]
+    public void DestroyNodeServerRpc(NetworkBehaviourReference node)
     {
-        node.isDestroyed = true;
-        node.isWalkable = false;
-
-        if (node.isOccupied.Value == false)
+        if (node.TryGet<Node>(out Node nodee))
         {
-            // Instantiate destroyed node prefab
-            GameObject destroyedNode = Instantiate(destroyedObjectPrefab, node.transform.position, node.transform.rotation);
-            destroyedNode.transform.SetParent(node.transform.parent);
-            node.GetComponent<NetworkObject>().Despawn();
+            nodee.isDestroyed = true;
+            nodee.isWalkable = false;
+
+            if (nodee.isOccupied.Value == false)
+            {
+                // Instantiate destroyed node prefab
+                GameObject destroyedNode = Instantiate(destroyedObjectPrefab, nodee.transform.position, nodee.transform.rotation);
+                destroyedNode.transform.SetParent(nodee.transform.parent);
+                nodee.GetComponent<NetworkObject>().Despawn();
+            }
         }
     }
 

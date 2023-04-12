@@ -9,8 +9,13 @@ public class TankScript : NetworkBehaviour
 {
     [SerializeField]
     public Node[,] nodes;
-    public bool canShoot = false;
+    public NetworkVariable<bool> canShoot = new(readPerm: NetworkVariableReadPermission.Everyone,
+    writePerm: NetworkVariableWritePermission.Server);
     public bool canScan = false;
+
+    public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
+    writePerm: NetworkVariableWritePermission.Server);
+
 
     public Grid grid;
 
@@ -27,7 +32,6 @@ public class TankScript : NetworkBehaviour
     private int numMoves = 200;
     private GameObject[] cam;
 
-    public bool hasMoved;
     public bool hasShooted;
 
     public override void OnNetworkSpawn()
@@ -59,7 +63,6 @@ public class TankScript : NetworkBehaviour
         }
     }
 
-
     void Start()
     {
         grid = FindAnyObjectByType<Grid>();
@@ -86,22 +89,25 @@ public class TankScript : NetworkBehaviour
             }
         }
 
-        if (!canShoot && Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && tankPlaced.Value)
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
-                Debug.Log("Player1 move");
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
             }
 
             if (IsClient && !IsOwnedByServer && ServerScript.instance.playerTurn.Value)
             {
-                if (IsOwner && !hasMoved && Input.GetMouseButtonDown(0))
+                if (IsOwner && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
                     MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                    
                 }
-                else if (hasMoved && canShoot && Input.GetMouseButtonDown(0))
+                //Debug.Log(hasMoved);
+                //Debug.Log(canShoot);
+                if (hasMoved.Value && canShoot.Value && Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log("ami tuk?");
                     TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
 
                     ChangeTurnLogicServerRpc();
@@ -137,7 +143,7 @@ public class TankScript : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            canShoot = !canShoot;
+            canShoot.Value = !canShoot.Value;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -160,19 +166,19 @@ public class TankScript : NetworkBehaviour
     void PlayerTurnsServerRpc(NetworkBehaviourReference hit)
     {
         Debug.Log(hit);
-        if (IsOwner && !hasMoved && Input.GetMouseButtonDown(0))
+        if (IsOwner && !hasMoved.Value && Input.GetMouseButtonDown(0))
         {
             Debug.Log("trqbva da myrda");
             if (hit.TryGet<Node>(out Node nodee))
                 MoveServerRpc(nodee);
             //hasMoved = true;
         }
-        else if (hasMoved && canShoot && Input.GetMouseButtonDown(0))
+        else if (hasMoved.Value && canShoot.Value && Input.GetMouseButtonDown(0))
         {
             if (hit.TryGet<Node>(out Node nodee))
                 TankShootServerRpc(nodee);
             hasShooted = true;
-            canShoot = false;
+            canShoot.Value = false;
             ChangeTurnLogicServerRpc();
         }
     }
@@ -197,7 +203,7 @@ public class TankScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void MoveServerRpc(NetworkBehaviourReference selectedNode)
     {
-        if (hasMoved) return;
+        if (hasMoved.Value) return;
         Debug.Log("No current node");
         //if (currentNode == null) return;
 
@@ -216,8 +222,10 @@ public class TankScript : NetworkBehaviour
 
                 this.gameObject.transform.position = currentNode.transform.position + new Vector3(0.5f, 0, 0.5f);
                 Debug.Log("vlizame tuka");
-                hasMoved = true;
-                canShoot = true;
+                hasMoved.Value = true;
+                canShoot.Value = true;
+                Debug.Log(hasMoved); 
+                Debug.Log(canShoot);
             }
         }
     }
@@ -231,13 +239,13 @@ public class TankScript : NetworkBehaviour
             if (node.isOccupied.Value)
             {
                 node.GetComponent<Node>().occupyingObject.GetComponent<TankScript>().tankHealth.Value--;
-                canShoot = false;
+                canShoot.Value = false;
                 Debug.Log("The tank has been attacked");
             }
             else
             {
-                node.DestroyNode(node);
-                canShoot = false;
+                node.DestroyNodeServerRpc(node);
+                canShoot.Value = false;
             }
 
         }
@@ -310,8 +318,8 @@ public class TankScript : NetworkBehaviour
     {
         yield return new WaitForSeconds(2f);
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
-        canShoot = false;
-        hasMoved = false;
+        canShoot.Value = false;
+        hasMoved.Value = false;
         hasShooted = false;
     }
 
