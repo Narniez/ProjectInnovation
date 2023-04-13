@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 913568795019709007}
   - component: {fileID: 8489966572345453840}
   - component: {fileID: 3009419933162674518}
+  - component: {fileID: 4974965238323319725}
   m_Layer: 6
   m_Name: tank_concept
   m_TagString: tank1
@@ -388,13 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07616200663d40441a26768f2339a913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankPlaced:
-    m_InternalValue: 0
-  playerMoveable:
-    m_InternalValue: 1
-  currentNode: {fileID: 0}
-  tankCanMove: 0
-  cam: {fileID: 6705120352378498509, guid: a23ffcf40c209504484cebceac62941b, type: 3}
+  tankHealth:
+    m_InternalValue: 3
 --- !u!114 &8489966572345453840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +433,19 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
+--- !u!65 &4974965238323319725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726609715371255005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8221933, y: 0.4484982, z: 0.90356255}
+  m_Center: {x: -0.49849316, y: 0.21849117, z: -0.50931036}
 --- !u!1 &8142863790011520908
 GameObject:
   m_ObjectHideFlags: 0
