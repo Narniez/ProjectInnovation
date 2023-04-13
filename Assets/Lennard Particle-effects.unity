@@ -5333,7 +5333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 684d873f7eb00034aac693bcf8ae66a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -335.5
+      value: -326.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 684d873f7eb00034aac693bcf8ae66a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5546,7 +5546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: ClampVelocityModule.magnitude.minMaxState
@@ -6899,7 +6899,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -6910,22 +6910,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
           value: 1
-          inSlope: 1
+          inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -2
+          outSlope: -2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -25787,7 +25787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
@@ -25807,7 +25807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: ClampVelocityModule.magnitude.minMaxState
@@ -45531,7 +45531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
@@ -45551,7 +45551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2883000737340871111, guid: 88d4f001687c55745a3416cba2172ce1, type: 3}
       propertyPath: ClampVelocityModule.magnitude.minMaxState
@@ -45693,7 +45693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015016388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 6.66, z: -0.67}
+  m_LocalPosition: {x: -1.183, y: 6.66, z: -0.728}
   m_LocalScale: {x: 0.3, y: 0.09999999, z: 0.09999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46712,7 +46712,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -46723,22 +46723,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
           value: 1
-          inSlope: 1
+          inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -2
+          outSlope: -2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
