@@ -254,6 +254,7 @@ public class TankScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void NodeScanServerRpc(NetworkBehaviourReference objectHit)
     {
+        Debug.Log("SCANING");
         if (objectHit.TryGet<Node>(out Node nodeToScan))
         {
             //RaycastHit hit;
@@ -265,6 +266,7 @@ public class TankScript : NetworkBehaviour
 
             {
                 hits = Physics.RaycastAll(nodeToScan.transform.position, directions[i], 100.0F);
+                Debug.DrawRay(nodeToScan.transform.position,directions[i]); 
 
                 for (int k = 0; k < hits.Length; k++)
 
@@ -273,7 +275,7 @@ public class TankScript : NetworkBehaviour
                     if (hit.collider.gameObject.tag == "Node")
                     {
                         Debug.Log("Node hit is " + hit.collider.gameObject.name + "Node position is " + hit.collider.gameObject.transform.position);
-                        Renderer renderer1 = hit.collider.gameObject.GetComponent<Renderer>();
+                        Renderer renderer1 = hit.collider.gameObject.GetComponentInChildren<Renderer>();
                         Material[] materials = renderer1.materials;
                         Color[] originalColors = new Color[materials.Length];
                         for (var m = 0; m < renderer1.materials.Length; m++)
