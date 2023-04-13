@@ -18,7 +18,12 @@ public class Grid : MonoBehaviour
 
     public GameObject cube;
     public GameObject player;
+    public List<GameObject> nodesPrefabs;
     public bool playerShoot = false;
+
+    public int[] degrees = new int[] { 90, 180, 270 };
+
+
     void Start()
     {
         nodes = new Node[rows, columns];
@@ -30,11 +35,12 @@ public class Grid : MonoBehaviour
                 //nodes[row, column] = new Node(new Vector3(row, 0, column), false);
                 //nodesDictionary.Add(nodes[row, column], new Vector3Int(row, 0, column));
 
-                //Calculate the position of the node based on the row, column, and spacing
+                //Calculate the position of the node based on the row, column, and spacingfab
                 //Vector3 cubePosition = nodes[row, column].position * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 0f, gapBetweenTheNodes / 2f);
                 //Instantiate the node object and get its Node component
+                GameObject nodePrefab = nodesPrefabs[Random.Range(0, nodesPrefabs.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-                GameObject nodeObject = Instantiate(cube, nodePosition, Quaternion.Euler(-90.0f,0f,0f));
+                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(0f,degrees[Random.Range(0,degrees.Length)],0f));
                 Node node = nodeObject.GetComponent<Node>();
                 node.position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
                
