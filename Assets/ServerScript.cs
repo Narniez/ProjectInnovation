@@ -35,32 +35,6 @@ public class ServerScript : NetworkBehaviour
             {
                 go.GetComponent<NetworkObject>().Despawn();
             }
-            //EndTurn();
         }
-        //if (playerTurn.Value)
-        //{
-        //    // Allow Player 1 to make moves
-        //    //..
-            
-
-
-        //    EndTurn();
-        //}
-        //else
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Space))
-        //        EndTurn();
-        //    // Wait for Player 2's turn
-        //}
-
     }
-
-
-    public void EndTurn()
-    {
-        // Switch turn to other player
-        playerTurn.Value = !playerTurn.Value;
-    }
-
-
 }
