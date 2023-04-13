@@ -15,25 +15,6 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-<<<<<<< main
-<<<<<<< main
-    y: 43.2
-    width: 1536
-    height: 772.8
-  m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 350}
-=======
-    y: 43
-    width: 1920
-    height: 1007
-  m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 3}
-  m_MinSize: {x: 875, y: 300}
->>>>>>> 3D tiles/textures
-=======
     y: 43
     width: 1920
     height: 989
@@ -41,7 +22,6 @@ MonoBehaviour:
   m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
->>>>>>> Optimizing code, added visibility when player are close
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -52,57 +32,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< main
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< main
-    x: 0
-    y: 389.6
-    width: 678.4
-    height: 333.19998
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-=======
-=======
->>>>>>> Art_im
-    x: 797
-    y: 0
-    width: 700
-    height: 678
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-<<<<<<< HEAD
-<<<<<<< main
-  m_EditorHideFlags: 0
-=======
   m_EditorHideFlags: 1
->>>>>>> Optimizing code, added visibility when player are close
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -111,47 +41,42 @@ MonoBehaviour:
   - {fileID: 3}
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< main
-    x: 857.6
-    y: 0
-    width: 678.4
-    height: 722.8
-  m_MinSize: {x: 100, y: 200}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 76
-=======
+    x: 0
+    y: 30
+    width: 1920
+    height: 939
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 48
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-=======
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
->>>>>>> Art_im
-  - {fileID: 4}
-  - {fileID: 6}
-  - {fileID: 5}
+  m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 1533
     y: 0
-    width: 1920
-    height: 1007
-  m_MinSize: {x: 875, y: 300}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_UseTopView: 1
-  m_TopViewHeight: 30
-  m_UseBottomView: 1
-  m_BottomViewHeight: 20
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
+    width: 387
+    height: 939
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &4
 =======
     x: 0
@@ -172,72 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-=======
-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> 3D tiles/textures
-=======
-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> Art_im
-=======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> Optimizing code, added visibility when player are close
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-<<<<<<< main
-    x: 0
-<<<<<<< HEAD
-<<<<<<< main
-    y: 30
-    width: 1536
-    height: 722.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 0
-  controlID: 75
-=======
-=======
->>>>>>> Art_im
-    y: 0
-    width: 1920
-    height: 30
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &5
-=======
-    x: 1533
-    y: 0
-    width: 387
-    height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
->>>>>>> Optimizing code, added visibility when player are close
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
@@ -256,23 +116,7 @@ MonoBehaviour:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
-<<<<<<< main
-=======
-=======
->>>>>>> Art_im
-    y: 987
-    width: 1920
-    height: 20
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &6
-=======
 --- !u!114 &5
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,19 +128,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< main
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< main
-  m_Name: ProjectBrowser
-=======
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
->>>>>>> 3D tiles/textures
-=======
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
->>>>>>> Art_im
-=======
   m_Name: ConsoleWindow
->>>>>>> Optimizing code, added visibility when player are close
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
@@ -304,50 +136,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    y: 416.8
-    width: 857.6
-    height: 306
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
-=======
     y: 732
     width: 1533
     height: 207
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
->>>>>>> Optimizing code, added visibility when player are close
   m_Panes:
   - {fileID: 13}
-<<<<<<< main
-  m_Selected: 0
-  m_LastSelected: 1
-=======
-=======
->>>>>>> Art_im
-    y: 30
-    width: 1920
-    height: 957
-  m_MinSize: {x: 400, y: 200}
-  m_MaxSize: {x: 32384, y: 16192}
-  vertical: 0
-  controlID: 99
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &7
-=======
   - {fileID: 18}
   - {fileID: 12}
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &6
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,56 +164,19 @@ MonoBehaviour:
   - {fileID: 7}
   - {fileID: 2}
   - {fileID: 8}
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-  - {fileID: 4}
-  - {fileID: 9}
-=======
-  - {fileID: 11}
->>>>>>> 3D tiles/textures
-=======
-  - {fileID: 11}
->>>>>>> Art_im
-=======
->>>>>>> Optimizing code, added visibility when player are close
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    width: 1536
-    height: 772.8
-=======
     width: 1920
     height: 989
->>>>>>> Optimizing code, added visibility when player are close
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
-<<<<<<< main
-=======
-=======
->>>>>>> Art_im
-    width: 1497
-    height: 957
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 1
-  controlID: 100
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &8
-=======
 --- !u!114 &7
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,35 +196,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    width: 1536
-=======
     width: 1920
->>>>>>> Optimizing code, added visibility when player are close
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
-<<<<<<< main
-=======
-=======
->>>>>>> Art_im
-    width: 1497
-    height: 678
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 8096}
-  vertical: 0
-  controlID: 101
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &9
-=======
 --- !u!114 &8
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -476,40 +217,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    y: 752.8
-    width: 1536
-    height: 20
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
-=======
-=======
->>>>>>> Art_im
-    y: 0
-    width: 323
-    height: 678
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &10
-=======
     y: 969
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
 --- !u!114 &9
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,39 +240,10 @@ MonoBehaviour:
   m_Children:
   - {fileID: 10}
   - {fileID: 5}
->>>>>>> Optimizing code, added visibility when player are close
   m_Position:
     serializedVersion: 2
     x: 323
     y: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    width: 857.6
-    height: 722.8
-  m_MinSize: {x: 100, y: 200}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 23
-=======
-=======
->>>>>>> Art_im
-    width: 474
-    height: 678
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 13}
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &11
-=======
     width: 1533
     height: 939
   m_MinSize: {x: 200, y: 200}
@@ -567,7 +251,6 @@ MonoBehaviour:
   vertical: 1
   controlID: 55
 --- !u!114 &10
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -576,21 +259,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-<<<<<<< main
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-<<<<<<< main
-  m_Name: SceneView
-=======
-  m_Name: ProjectBrowser
->>>>>>> 3D tiles/textures
-=======
-  m_Name: ProjectBrowser
->>>>>>> Art_im
-=======
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
->>>>>>> Optimizing code, added visibility when player are close
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
@@ -601,37 +271,6 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< main
     y: 0
-<<<<<<< main
-    width: 857.6
-    height: 416.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
-  m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 12}
-  - {fileID: 14}
-=======
-=======
->>>>>>> Art_im
-    y: 678
-    width: 1497
-    height: 279
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  - {fileID: 18}
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &12
-=======
     width: 1533
     height: 732
   m_MinSize: {x: 200, y: 100}
@@ -639,7 +278,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 39
 --- !u!114 &11
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -647,84 +285,13 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< main
-<<<<<<< main
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-=======
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: SceneView
->>>>>>> Optimizing code, added visibility when player are close
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< main
-    x: 0
-    y: 73.6
-    width: 856.6
-    height: 395.8
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: Device Simulator
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 2280, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 2
-  m_UseMipMap: 0
-  m_SimulatorState:
-    controlPanelVisible: 0
-    controlPanelWidth: NaN
-    controlPanelFoldoutKeys:
-    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
-    controlPanelFoldoutValues: 00
-    pluginNames:
-    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
-    pluginStates:
-    - '{}'
-    scale: 10
-    fitToScreenEnabled: 1
-    rotationDegree: 270
-    highlightSafeAreaEnabled: 0
-    friendlyName: Samsung Galaxy Note10
-    networkReachability: 1
-    systemLanguage: 10
-=======
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1497
-    y: 0
-    width: 423
-    height: 957
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
-  m_Panes:
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 0
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
---- !u!114 &13
-=======
     x: 223
     y: 0
     width: 1310
@@ -738,7 +305,6 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
->>>>>>> Optimizing code, added visibility when player are close
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1033,52 +599,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< main
-    x: 0
-    y: 73.6
-    width: 856.6
-    height: 395.8
-=======
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-=======
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
->>>>>>> Art_im
-    x: 323
-    y: 73
-    width: 472
-    height: 657
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-=======
     x: 223
     y: 73
     width: 1308
     height: 711
->>>>>>> Optimizing code, added visibility when player are close
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1088,21 +612,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-      snapOffset: {x: -100, y: -25.600006}
-=======
-      snapOffset: {x: -101, y: -26}
->>>>>>> 3D tiles/textures
-=======
-      snapOffset: {x: -101, y: -26}
->>>>>>> Art_im
-      snapOffsetDelta: {x: 0, y: 0}
-=======
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: -101, y: -26}
->>>>>>> Optimizing code, added visibility when player are close
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -1123,19 +634,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-      snapOffset: {x: 0, y: 24.8}
-=======
-      snapOffset: {x: 0, y: 25}
->>>>>>> 3D tiles/textures
-=======
-      snapOffset: {x: 0, y: 25}
->>>>>>> Art_im
-=======
       snapOffset: {x: 0, y: 0}
->>>>>>> Optimizing code, added visibility when player are close
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -1339,27 +838,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    m_Target: {x: 949.94293, y: 561.01447, z: -8.700285}
-    speed: 2
-    m_Value: {x: 949.94293, y: 561.01447, z: -8.700285}
-=======
-    m_Target: {x: 3.8447404, y: -0.3212239, z: 4.5647097}
-    speed: 2
-    m_Value: {x: 0.000000014901161, y: -0.041636214, z: 0.06677869}
->>>>>>> 3D tiles/textures
-=======
-    m_Target: {x: 3.8447404, y: -0.3212239, z: 4.5647097}
-    speed: 2
-    m_Value: {x: 0.000000014901161, y: -0.041636214, z: 0.06677869}
->>>>>>> Art_im
-=======
     m_Target: {x: 6.106045, y: 4.165826, z: 6.590564}
     speed: 2
     m_Value: {x: 6.106045, y: 4.165826, z: 6.590564}
->>>>>>> Optimizing code, added visibility when player are close
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1406,37 +887,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
-=======
     m_Target: {x: 0.7040087, y: 0.028463753, z: -0.028340468, w: 0.70908517}
->>>>>>> Optimizing code, added visibility when player are close
     speed: 2
     m_Value: {x: 0.70399344, y: 0.028463135, z: -0.028339854, w: 0.7090698}
   m_Size:
     m_Target: 0.65068793
     speed: 2
-<<<<<<< main
-    m_Value: 648.99567
-=======
-=======
->>>>>>> Art_im
-    m_Target: {x: 0.1035672, y: 0.4527803, z: -0.05076798, w: 0.88428926}
-    speed: 2
-    m_Value: {x: 0.14191899, y: 0.5203457, z: -0.08573863, w: 0.8377042}
-  m_Size:
-    m_Target: 1.3115013
-    speed: 2
-    m_Value: 0.39058542
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-=======
     m_Value: 0.65068793
->>>>>>> Optimizing code, added visibility when player are close
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1454,33 +911,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-=======
-  m_LastSceneViewRotation: {x: -0.48394093, y: 0.21892795, z: -0.12645875, w: -0.8378008}
->>>>>>> 3D tiles/textures
-=======
-  m_LastSceneViewRotation: {x: -0.48394093, y: 0.21892795, z: -0.12645875, w: -0.8378008}
->>>>>>> Art_im
-=======
   m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> Optimizing code, added visibility when player are close
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
---- !u!114 &19
-=======
-=======
->>>>>>> Art_im
---- !u!114 &14
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1623,30 +1061,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    x: 0
-    y: 73.6
-    width: 856.6
-    height: 395.8
-=======
-=======
->>>>>>> Art_im
-    x: 797
-    y: 73
-    width: 698
-    height: 657
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-=======
     x: 223
     y: 73
     width: 1308
     height: 711
->>>>>>> Optimizing code, added visibility when player are close
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1702,58 +1120,16 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-      width: 856.6
-      height: 374.8
-    m_Scale: {x: 0.99999994, y: 0.99999994}
-    m_Translation: {x: 428.3, y: 187.4}
-=======
-=======
->>>>>>> Art_im
-      width: 698
-      height: 636
-    m_Scale: {x: 0.36354166, y: 0.36354166}
-    m_Translation: {x: 349, y: 318}
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-=======
       width: 1308
       height: 690
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 654, y: 345}
->>>>>>> Optimizing code, added visibility when player are close
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< main
-<<<<<<< main
-      x: -428.30002
-      y: -187.40001
-      width: 856.60004
-      height: 374.80002
-    m_MinimalGUI: 1
-  m_defaultScale: 0.99999994
-  m_LastWindowPixelSize: {x: 1070.75, y: 494.75}
-=======
-      x: -960
-      y: -874.7278
-      width: 1920
-      height: 1749.4556
-    m_MinimalGUI: 1
-  m_defaultScale: 0.36354166
-  m_LastWindowPixelSize: {x: 698, y: 657}
-<<<<<<< HEAD
->>>>>>> 3D tiles/textures
-=======
->>>>>>> Art_im
-=======
       x: -654
       y: -345
       width: 1308
@@ -1761,20 +1137,12 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1308, y: 711}
->>>>>>> Optimizing code, added visibility when player are close
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
---- !u!114 &20
-=======
-=======
->>>>>>> Art_im
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1943,25 +1311,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< main
-<<<<<<< HEAD
-<<<<<<< main
-    y: 428.80002
-    width: 1171.8
-    height: 346.59998
-=======
-    y: 731
-    width: 1272
-    height: 278
-=======
-    y: 731
-    width: 1272
-    height: 278
-=======
     y: 805
     width: 1532
     height: 186
->>>>>>> Optimizing code, added visibility when player are close
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
