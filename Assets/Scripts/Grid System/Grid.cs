@@ -30,7 +30,7 @@ public class Grid : NetworkBehaviour
                 GameObject nodePrefab = nodesPrefab[Random.Range(0, nodesPrefab.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
 
-                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f, 0f, 0f), this.gameObject.transform);
+                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(0f, 0f, 0f), this.gameObject.transform);
                 nodeObject.gameObject.GetComponent<NetworkObject>().Spawn();
 
                 NetworkObject node = nodeObject.GetComponent<NetworkObject>();

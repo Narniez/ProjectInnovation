@@ -19,7 +19,7 @@ public class TankScript : NetworkBehaviour
     private NetworkObject currentNode;
     private int numMoves = 200;
 
-    private bool canScan = false;
+    public bool canScan = false;
     private bool hasShooted;
 
     private PlayerDead _playerDead;
@@ -184,7 +184,7 @@ public class TankScript : NetworkBehaviour
                     RaycastHit hit = hits[k];
                     if (hit.collider.gameObject.CompareTag("Node"))
                     {
-                        Renderer renderer1 = hit.collider.gameObject.GetComponent<Renderer>();
+                        Renderer renderer1 = hit.collider.gameObject.GetComponentInChildren<Renderer>();
                         Material[] materials = renderer1.materials;
                         Color[] originalColors = new Color[materials.Length];
                         for (var m = 0; m < renderer1.materials.Length; m++)
