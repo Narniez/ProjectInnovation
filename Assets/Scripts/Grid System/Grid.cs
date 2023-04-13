@@ -25,6 +25,7 @@ public class Grid : NetworkBehaviour
 
     public List<GameObject> nodesPrefab;
     public GameObject player;
+    public List<GameObject> nodesPrefabs;
     public bool playerShoot = false;
     TankScript tank;
 
@@ -43,12 +44,12 @@ public class Grid : NetworkBehaviour
                 //nodes[row, column] = new Node(new Vector3(row, 0, column), false);
                 //nodesDictionary.Add(nodes[row, column], new Vector3Int(row, 0, column));
 
-                //Calculate the position of the node based on the row, column, and spacing
+                //Calculate the position of the node based on the row, column, and spacingfab
                 //Vector3 cubePosition = nodes[row, column].position * gapBetweenTheNodes + new Vector3(gapBetweenTheNodes / 2f, 0f, gapBetweenTheNodes / 2f);
                 //Instantiate the node object and get its Node component
                 GameObject nodePrefab = nodesPrefab[Random.Range(0, nodesPrefab.Count)];
                 nodePosition = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
-                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(-90.0f, 0f, 0f), this.gameObject.transform);
+                GameObject nodeObject = Instantiate(nodePrefab, nodePosition, Quaternion.Euler(0.0f, 0f, 0f), this.gameObject.transform);
                 nodeObject.gameObject.GetComponent<NetworkObject>().Spawn();
                 NetworkObject node = nodeObject.GetComponent<NetworkObject>();
                  node.gameObject.GetComponent<Node>().position = new Vector3(column * gapBetweenTheNodes, 0, row * gapBetweenTheNodes);
