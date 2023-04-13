@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 81987142}
   - component: {fileID: 81987141}
   - component: {fileID: 81987144}
+  - component: {fileID: 81987145}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -945,8 +946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae1cb6c1291b804fa015d9f6430217a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMain: {fileID: 81987142}
-  audioBack: {fileID: 81987141}
 --- !u!82 &81987144
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1043,6 +1042,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &81987145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81987136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6a6c40d95d1804aa3b2bcb91ebf206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87170381
 GameObject:
   m_ObjectHideFlags: 0
@@ -11503,10 +11514,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 81987145}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
