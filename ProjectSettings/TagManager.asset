@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tank1
   - Node
+  - tank2
   layers:
   - Default
   - TransparentFX

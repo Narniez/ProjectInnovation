@@ -230,10 +230,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 19156573}
-    PlayerPrefab: {fileID: 5726609715371255005, guid: 2a7cca1588dc20c4e86b6495647da9af, type: 3}
+    PlayerPrefab: {fileID: 1896258231642218174, guid: 5934f69b6223e014692a5bc836a83f2b, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 7104934208654128390, guid: f2083d490b56ee6439791d99943abe81, type: 3}
+      Prefab: {fileID: 1896258231642218174, guid: 5934f69b6223e014692a5bc836a83f2b, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -664,7 +664,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -1256,7 +1257,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -1427,7 +1429,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -1857,7 +1860,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -2033,7 +2037,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -2300,7 +2305,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -2498,7 +2504,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -2659,7 +2666,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -2876,7 +2884,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -3099,7 +3108,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -3270,7 +3280,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -3432,7 +3443,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -3634,7 +3646,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -3806,7 +3819,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -3969,7 +3983,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -4196,7 +4211,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -4548,7 +4564,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -4754,7 +4771,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -4925,7 +4943,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -5083,7 +5102,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -5324,7 +5344,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -5554,7 +5575,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -5718,7 +5740,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -5909,7 +5932,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -6167,7 +6191,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -6391,7 +6416,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -6657,7 +6683,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -6979,7 +7006,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -7140,7 +7168,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -7316,7 +7345,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -7489,7 +7519,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -7651,7 +7682,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -7875,7 +7907,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -8040,7 +8073,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -8242,7 +8276,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -8425,7 +8460,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -8608,7 +8644,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -8784,7 +8821,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -8967,7 +9005,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -9487,7 +9526,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -9673,7 +9713,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -9863,7 +9904,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -10035,7 +10077,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -10203,7 +10246,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -10397,7 +10441,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -10587,7 +10632,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -10755,7 +10801,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -10943,7 +10990,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -11204,7 +11252,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -11471,7 +11520,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -11632,7 +11682,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -11793,7 +11844,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -11998,7 +12050,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -12157,7 +12210,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -12350,7 +12404,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -12521,7 +12576,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -12690,7 +12746,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -12884,7 +12941,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -13052,7 +13110,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -13220,7 +13279,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -13392,7 +13452,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -13560,7 +13621,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -13724,7 +13786,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -13904,7 +13967,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -14065,7 +14129,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -14236,7 +14301,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -14407,7 +14473,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -14578,7 +14645,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -14759,7 +14827,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -14928,7 +14997,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -15111,7 +15181,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -15282,7 +15353,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -15441,7 +15513,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -15609,7 +15682,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -15795,7 +15869,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -15964,7 +16039,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -16133,7 +16209,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -16297,7 +16374,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -16468,7 +16546,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -16831,7 +16910,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -16999,7 +17079,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -17165,7 +17246,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -17336,7 +17418,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -17504,7 +17587,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -17672,7 +17756,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -17838,7 +17923,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -18007,7 +18093,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -18179,7 +18266,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -18347,7 +18435,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -18533,7 +18622,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -18694,7 +18784,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -18855,7 +18946,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -19016,7 +19108,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -19181,7 +19274,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -19349,7 +19443,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -19517,7 +19612,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -19704,7 +19800,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -20156,7 +20253,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -20324,7 +20422,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -20485,7 +20584,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -20649,7 +20749,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -20810,7 +20911,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -20975,7 +21077,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -21139,7 +21242,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -21300,7 +21404,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -21465,7 +21570,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 0
@@ -21634,7 +21740,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -21795,7 +21902,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 9
@@ -21963,7 +22071,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -22150,7 +22259,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -22318,7 +22428,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -22476,7 +22587,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -22644,7 +22756,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -22812,7 +22925,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -22976,7 +23090,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -23137,7 +23252,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -23397,7 +23513,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -23565,7 +23682,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -23729,7 +23847,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -23900,7 +24019,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -24066,7 +24186,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -24237,7 +24358,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -24403,7 +24525,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
@@ -24568,7 +24691,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -24732,7 +24856,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 4
@@ -24896,7 +25021,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -25054,7 +25180,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -25218,7 +25345,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -25379,7 +25507,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 1
@@ -25548,7 +25677,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -25720,7 +25850,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -25892,7 +26023,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -26060,7 +26192,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -26225,7 +26358,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -26396,7 +26530,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -26568,7 +26703,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 10
@@ -26740,7 +26876,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -26901,7 +27038,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 3
@@ -27069,7 +27207,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 7
@@ -27237,7 +27376,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 11
@@ -27403,7 +27543,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 8
@@ -27567,7 +27708,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 2
@@ -27732,7 +27874,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 5
@@ -27903,7 +28046,8 @@ MonoBehaviour:
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
-  isOccupied: 0
+  isOccupied:
+    m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
   row: 6
