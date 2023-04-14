@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 1407092442}
   - component: {fileID: 1407092441}
   - component: {fileID: 1407092440}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Main Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

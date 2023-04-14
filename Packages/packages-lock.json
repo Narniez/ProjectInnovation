@@ -132,7 +132,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
     "com.unity.services.authentication": {
       "version": "2.4.0",
       "depth": 1,
@@ -187,8 +186,6 @@
       },
       "url": "https://packages.unity.com"
     },
-=======
->>>>>>> Art
     "com.unity.settings-manager": {
       "version": "1.0.3",
       "depth": 2,

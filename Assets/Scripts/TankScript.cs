@@ -26,6 +26,8 @@ public class TankScript : NetworkBehaviour
     private PlayerDead _playerDead;
     public LayerMask layerMask;
 
+    public GameObject explosion;
+
     void Start()
     {
         if (!IsOwner) return;
@@ -172,6 +174,10 @@ public class TankScript : NetworkBehaviour
         {
 
             ServerCallingServerRpc(node);
+            GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0,node.transform.position.z),Quaternion.Euler(new Vector3(-90,0,0)));
+            go.GetComponent<NetworkObject>().Spawn();
+           StartCoroutine(StopParticleSystem(go, 1));
+
 
             if (node.isOccupied.Value)
             {
@@ -181,8 +187,8 @@ public class TankScript : NetworkBehaviour
             }
             else
             {
+                Debug.Log("Should destroy particle and node");
                 node.DestroyNodeServerRpc(node);
-
                 canShoot.Value = false;
             }
             if (!canTakeFullDmg)
@@ -200,6 +206,14 @@ public class TankScript : NetworkBehaviour
             }
 
         }
+    }
+
+
+    IEnumerator StopParticleSystem(GameObject particleSystem, float time)
+    {
+        Debug.Log("PARTICLE DESTROY");
+        yield return new WaitForSeconds(time);
+        Destroy(particleSystem);
     }
 
     [ServerRpc(RequireOwnership = false)]

@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - tank1
   - Node
-  - tank2
+  - tank1
   - hearts
+  - tank2
   layers:
   - Default
   - TransparentFX
@@ -15,13 +15,8 @@ TagManager:
   - PostProcessing
   - Water
   - UI
-<<<<<<< HEAD
   - Player01
   - Player02
-=======
->>>>>>> Art
-  - Post Process
-  - 
   - 
   - 
   - 

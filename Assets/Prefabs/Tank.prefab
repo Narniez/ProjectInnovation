@@ -104,11 +104,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankHealth:
     m_InternalValue: 3
+  canShoot:
+    m_InternalValue: 0
+  tankPlaced:
+    m_InternalValue: 0
+  hasMoved:
+    m_InternalValue: 0
+  numMoves: 2
   canScan: 0
   hearts: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 192
+  explosion: {fileID: 6814719607927169929, guid: 2cdb87d05f2cf864eb3be0cb23bc5089, type: 3}
 --- !u!114 &5194654585556733493
 MonoBehaviour:
   m_ObjectHideFlags: 0
