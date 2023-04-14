@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
@@ -82,11 +81,6 @@ MonoBehaviour:
   row: 0
   column: 0
   neighbours: []
-  destroyedNodeMesh: {fileID: 0}
-  destroyedNodeMaterial: {fileID: 0}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &-3522035149996319792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98,8 +92,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2511804, z: 1}
-  m_Center: {x: 0, y: 0.08490321, z: 0}
+  m_Size: {x: 1, y: 0.7523076, z: 1}
+  m_Center: {x: 0, y: 0.33546677, z: 0}
 --- !u!1001 &506370978448838108
 PrefabInstance:
   m_ObjectHideFlags: 0

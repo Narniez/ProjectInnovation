@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerDead : MonoBehaviour
 {
-    public void TankDead(int health)
+    public void TankDead(float health)
     {
         if (health > 0) return;
 

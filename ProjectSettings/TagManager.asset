@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - tank1
   - Node
+  - tank1
+  - hearts
   - tank2
   layers:
   - Default

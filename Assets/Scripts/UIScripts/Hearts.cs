@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
 
 public class Hearts : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class Hearts : MonoBehaviour
     public int maxHealth;
     [Range(0,3)]
     public float currentHealth;
-
+    public GameObject tank;
     List<GameObject> heartImages = new List<GameObject>();
     Color colorActive = new Color(1f,1f,1f);
     Color colorInactive = new Color(0.5f,0.5f,0.5f);
@@ -31,7 +31,8 @@ public class Hearts : MonoBehaviour
     void Update(){
         if (currentHealth <= maxHealth){
             for (int i = 0; i < maxHealth; i++){
-                if (i < currentHealth){
+                if (i < currentHealth)
+                {
                     heartImages[i].transform.GetChild(0).GetComponent<Image>().color = colorActive;
                     heartImages[i].transform.GetChild(1).GetComponent<Image>().color = colorActive;
                     

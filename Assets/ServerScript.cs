@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ServerScript : NetworkBehaviour
 {
+    public bool startHost = false;
     public static ServerScript instance;
     public GameObject prefab;
     public NetworkVariable<bool> playerTurn =
@@ -22,7 +23,7 @@ public class ServerScript : NetworkBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) || startHost)
             NetworkManager.Singleton.StartHost();
         if (Input.GetKeyDown(KeyCode.C))
             NetworkManager.Singleton.StartClient();
@@ -36,5 +37,10 @@ public class ServerScript : NetworkBehaviour
                 go.GetComponent<NetworkObject>().Despawn();
             }
         }
+    }
+
+   public void StartHost()
+    {
+        startHost = true;
     }
 }

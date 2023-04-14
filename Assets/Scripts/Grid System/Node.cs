@@ -46,6 +46,7 @@ public class Node : NetworkBehaviour
             {
                 GameObject destroyedNode = Instantiate(destroyedObjectPrefab, nodee.transform.position, nodee.transform.rotation);
                 destroyedNode.transform.SetParent(nodee.transform.parent);
+                destroyedNode.GetComponent<NetworkObject>().Spawn();
                 nodee.GetComponent<NetworkObject>().Despawn();
             }
         }
