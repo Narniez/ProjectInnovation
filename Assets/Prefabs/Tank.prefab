@@ -104,6 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankHealth:
     m_InternalValue: 3
+  canScan: 0
+  hearts: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 192
@@ -136,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
-  SyncPositionY: 0
+  SyncPositionY: 1
   SyncPositionZ: 1
   SyncRotAngleX: 0
   SyncRotAngleY: 0
@@ -198,3 +200,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b3a6b52f37a1445b4d5730fecc8536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  client1: {fileID: 0}
+  client2: {fileID: 0}

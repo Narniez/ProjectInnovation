@@ -4,36 +4,41 @@ using UnityEngine;
 
 public class TankScript : NetworkBehaviour
 {
-    public NetworkVariable<int> tankHealth = new(3, readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<float> tankHealth = new(3, readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
-    private NetworkVariable<bool> canShoot = new(readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<bool> canShoot = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
-    private NetworkVariable<bool> tankPlaced = new(readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<bool> tankPlaced = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
-    private NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
     private NetworkObject currentNode;
-    private int numMoves = 200;
+    public int numMoves = 2;
 
     public bool canScan = false;
-    private bool hasShooted;
+
+    public GameObject hearts;
 
     private PlayerDead _playerDead;
     public LayerMask layerMask;
 
     void Start()
     {
+        if (!IsOwner) return;
         _playerDead = GetComponent<PlayerDead>();
+        hearts = GameObject.FindGameObjectWithTag("hearts");
+        hearts.GetComponent<Hearts>().tank = this.gameObject;
         //GyroControls.ObjectClicked += OnObjectClicked;
     }
 
     void Update()
     {
         if (!IsOwner) return;
+        hearts.gameObject.GetComponent<Hearts>().currentHealth = tankHealth.Value;
         _playerDead.TankDead(tankHealth.Value);
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -56,14 +61,15 @@ public class TankScript : NetworkBehaviour
 
             if (!IsOwnedByServer && ServerScript.instance.playerTurn.Value)
             {
-                if (!hasMoved.Value && Input.GetMouseButtonDown(0))
-                {
-                    MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                }
-                if (hasMoved.Value && canShoot.Value && Input.GetMouseButtonDown(0))
+                if (canShoot.Value && Input.GetMouseButtonDown(0))
                 {
                     TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
                     ChangeTurnLogicServerRpc();
+
+                }
+                if (tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
+                {
+                    MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
                 }
             }
         }
@@ -72,31 +78,22 @@ public class TankScript : NetworkBehaviour
         {
             canShoot.Value = !canShoot.Value;
         }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            canScan = !canScan;
-        }
-
-        if (Input.GetMouseButtonDown(0) && canScan && Physics.Raycast(ray, out hit))
-        {
-            ServerCallingServerRpc(hit.collider.gameObject.GetComponent<Node>());
-        }
     }
 
     [ServerRpc(RequireOwnership = false)]
     void PlayerTurnsServerRpc(NetworkBehaviourReference hit)
     {
-        if (!hasMoved.Value && Input.GetMouseButtonDown(0))
+        if (tankPlaced.Value && !canShoot.Value && Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Moving player");
             if (hit.TryGet<Node>(out Node nodee))
                 MoveServerRpc(nodee);
         }
-        else if (hasMoved.Value && canShoot.Value && Input.GetMouseButtonDown(0))
+        else if (canShoot.Value && Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Shooting Player");
             if (hit.TryGet<Node>(out Node nodee))
                 TankShootServerRpc(nodee);
-            hasShooted = true;
             canShoot.Value = false;
             ChangeTurnLogicServerRpc();
         }
@@ -109,10 +106,10 @@ public class TankScript : NetworkBehaviour
         {
             currentNode = nodee.NetworkObject;
             currentNode.GetComponent<Node>().isOccupied.Value = true;
-            this.transform.position = currentNode.transform.position + new Vector3(0,.25f,0);
-            this.transform.rotation = Quaternion.Euler(-90,0,0);
-            tankPlaced.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
+            this.transform.position = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
+            // this.transform.rotation = Quaternion.Euler(-90,0,0);
+            tankPlaced.Value = true;
         }
     }
 
@@ -126,44 +123,88 @@ public class TankScript : NetworkBehaviour
             if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1 && nodee.isWalkable && !nodee.isOccupied.Value)
             {
                 PlayerCloseDetection.checkDistance?.Invoke();
-
                 currentNode.GetComponent<Node>().isOccupied.Value = false;
+                currentNode.GetComponent<Node>().occupyingObject = null;
                 nodee.isOccupied.Value = true;
                 currentNode = nodee.NetworkObject;
                 currentNode.GetComponent<Node>().isOccupied.Value = true;
                 currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
 
-                this.gameObject.transform.position = currentNode.transform.position + new Vector3(0, .25f, 0);
-                this.transform.rotation = Quaternion.Euler(-90, 180, 0);
+                Vector3 destinationPos = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
+                MoveToNodeServerRpc(destinationPos);
+                numMoves--;
 
-                hasMoved.Value = true;
-                canShoot.Value = true;
+                if (numMoves <= 0)
+                {
+                    hasMoved.Value = true;
+                    canShoot.Value = true;
+                }
             }
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
+    void MoveToNodeServerRpc(Vector3 destination)
+    {
+        StartCoroutine(MoveTowardsNode(destination));
+    }
+
+
+    IEnumerator MoveTowardsNode(Vector3 destinationPos)
+    {
+        // Set the tank's speed
+        float speed = 2f;
+        while (transform.position != destinationPos)
+        {
+            // Move the tank towards the clicked node
+            transform.position = Vector3.MoveTowards(transform.position, destinationPos, speed * Time.deltaTime);
+            yield return null;
+        }
+        // Set the tank's position to the final destination
+        transform.position = destinationPos;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
     public void TankShootServerRpc(NetworkBehaviourReference nodeToShoot)
     {
+        bool canTakeFullDmg = false;
         if (nodeToShoot.TryGet<Node>(out Node node))
         {
+
+            ServerCallingServerRpc(node);
+
             if (node.isOccupied.Value)
             {
+                canTakeFullDmg = true;
                 node.occupyingObject.GetComponent<TankScript>().tankHealth.Value--;
                 canShoot.Value = false;
             }
             else
             {
                 node.DestroyNodeServerRpc(node);
-                
+
                 canShoot.Value = false;
+            }
+            if (!canTakeFullDmg)
+            {
+                float sphereRadius = 1f;
+                Collider[] nearbyColliders = Physics.OverlapSphere(node.transform.position, sphereRadius);
+                foreach (Collider collider in nearbyColliders)
+                {
+                    if (collider.CompareTag("Node") && collider.GetComponent<Node>().isOccupied.Value)
+                    {
+                        //collider.gameObject.GetComponentInChildren<Renderer>().materials[0].color = Color.blue;
+                        collider.GetComponent<Node>().occupyingObject.GetComponent<TankScript>().tankHealth.Value -= 0.5f;
+                    }
+                }
             }
 
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    void ServerCallingServerRpc(NetworkBehaviourReference objectHit) {
+    void ServerCallingServerRpc(NetworkBehaviourReference objectHit)
+    {
         NodeScanClientRpc(objectHit);
     }
 
@@ -186,10 +227,12 @@ public class TankScript : NetworkBehaviour
                     {
                         Renderer renderer1 = hit.collider.gameObject.GetComponentInChildren<Renderer>();
                         Material[] materials = renderer1.materials;
+                        Node node = hit.collider.gameObject.GetComponent<Node>();
                         Color[] originalColors = new Color[materials.Length];
                         for (var m = 0; m < renderer1.materials.Length; m++)
                         {
-                            if (hit.collider.gameObject.GetComponent<Node>().isOccupied.Value == false)
+
+                            if (!node.isOccupied.Value)
                             {
                                 originalColors[m] = materials[m].color;
                                 renderer1.materials[m].color = Color.red;
@@ -224,11 +267,11 @@ public class TankScript : NetworkBehaviour
 
     IEnumerator TurnChange()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
         canShoot.Value = false;
         hasMoved.Value = false;
-        hasShooted = false;
+        numMoves = 2;
     }
 
 }

@@ -243,32 +243,52 @@ MonoBehaviour:
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 6129265012973462479, guid: 9f5ae3aaa1030dd438f4b0d374b2f38b, type: 3}
+      Prefab: {fileID: 2675671400717014338, guid: e63664bd5142cc04f9f5404fbeea2162, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 5897230317431752030, guid: 031283802f783dc40baabde3e5d04a8f, type: 3}
+      Prefab: {fileID: 8140963957059180852, guid: 6f14cc9b8a4e7b14c9842fed938005b9, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 3765174445771451106, guid: 679b86ce239eecd48b381a2d466f3e93, type: 3}
+      Prefab: {fileID: 8092746798031098050, guid: 8dec853b80d93ba47b5d4804a5a3a1df, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 5822100615652470594, guid: e687619de628f8a49836d5f7bc42a910, type: 3}
+      Prefab: {fileID: 1785139232854248584, guid: 056d9dca307abdc40959f555e209edf8, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 2982482565741645871, guid: a2a4f6ebb55c9944baef4b23352bce86, type: 3}
+      Prefab: {fileID: 6968729715306933684, guid: f614808242a893f4da9c29e7ec429f33, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 6291811125823490665, guid: 07adb4df2b0c1e741a084d77ae5c99f6, type: 3}
+      Prefab: {fileID: 1513882265600148172, guid: ae8c9977fd50a764ea9034a1a02aed70, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 1149125559891438484, guid: fe64edaff04d16349a9daaeb6a1870d2, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 928268407910783126, guid: 82620072c7a9d934abf8586c478b6af3, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 581014829410530742, guid: ab4cc98004f8eee44af6239fff201572, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 0}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -353,6 +373,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4468183295322731524, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731524, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731524, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195151633}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartHost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4468183295427704657, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -440,6 +500,18 @@ PrefabInstance:
     - target: {fileID: 4468183295427704661, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695860263995356362, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695860263995356362, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_TagString
+      value: hearts
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695860263995356405, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: tank
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
@@ -756,12 +828,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -776,11 +851,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &112314331
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -850,6 +920,83 @@ Transform:
   m_Father: {fileID: 1792192334}
   m_RootOrder: 109
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &116216239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116216240}
+  - component: {fileID: 116216242}
+  - component: {fileID: 116216241}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &116216240
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116216239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 362844028}
+  m_Father: {fileID: 140252597}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 256, y: 256}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &116216241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116216239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e6b2e48818b12864eaf21e108f3338f2, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &116216242
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116216239}
+  m_CullTransparentMesh: 1
 --- !u!1 &131124009
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +1049,100 @@ Transform:
   m_Father: {fileID: 1792192334}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &140252596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140252597}
+  - component: {fileID: 140252599}
+  - component: {fileID: 140252598}
+  - component: {fileID: 140252600}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &140252597
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140252596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6935324, y: 0.6935324, z: 0.6935324}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 116216240}
+  m_Father: {fileID: 971246873}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -128, y: -128}
+  m_SizeDelta: {x: 256, y: 256}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &140252598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140252596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e6b2e48818b12864eaf21e108f3338f2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &140252599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140252596}
+  m_CullTransparentMesh: 1
+--- !u!114 &140252600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140252596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63a619a400bcaa479b950e29e40bcb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 362844029}
+  uiText: {fileID: 116216241}
+  duration: 3
+  time: 0
 --- !u!4 &143793684
 Transform:
   m_ObjectHideFlags: 0
@@ -917,6 +1158,141 @@ Transform:
   m_Father: {fileID: 1792192334}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &145377964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145377965}
+  - component: {fileID: 145377967}
+  - component: {fileID: 145377966}
+  m_Layer: 5
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &145377965
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145377964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 971246873}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25, y: 383}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &145377966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145377964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Choose a starting place for your tank
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -138.8983, y: 0, z: -215.15836, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &145377967
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145377964}
+  m_CullTransparentMesh: 1
 --- !u!1 &153419912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,12 +1725,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -1369,11 +1748,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &318093125
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1521,12 +1895,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -1541,11 +1918,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &333244501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1743,6 +2115,141 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &362844027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362844028}
+  - component: {fileID: 362844030}
+  - component: {fileID: 362844029}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &362844028
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362844027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7022142, y: 0.7022142, z: 0.7022142}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 116216240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.1, y: 0.4}
+  m_AnchorMax: {x: 0.90000004, y: 0.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 120, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &362844029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362844027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 00:00
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &362844030
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362844027}
+  m_CullTransparentMesh: 1
 --- !u!4 &370701965
 Transform:
   m_ObjectHideFlags: 0
@@ -1952,12 +2459,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -1972,11 +2482,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &417234232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2129,12 +2634,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -2149,11 +2657,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &438025556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2397,12 +2900,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -2414,11 +2920,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &492514537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2596,12 +3097,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -2613,11 +3117,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &548654326
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2758,12 +3257,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -2778,11 +3280,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &556357312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2976,12 +3473,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -2996,11 +3496,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &588129900
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3200,12 +3695,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -3220,11 +3718,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &620985623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3372,12 +3865,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -3389,11 +3885,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &628589428
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3535,12 +4026,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -3552,11 +4046,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &628951978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3738,12 +4227,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -3758,11 +4250,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &645202497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3911,12 +4398,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -3926,11 +4416,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &653174549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4075,12 +4560,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -4092,11 +4580,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &658046228
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4303,12 +4786,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -4323,11 +4809,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &674203450
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4656,12 +5137,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -4676,11 +5160,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &729839978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4863,12 +5342,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -4883,11 +5365,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &748573688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5035,12 +5512,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -5052,11 +5532,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &751651877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5194,12 +5669,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -5211,11 +5689,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &757413066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5436,12 +5909,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -5456,11 +5932,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &790883209
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5667,12 +6138,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -5687,11 +6161,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &813157223
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5832,12 +6301,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -5849,11 +6321,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &828460778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6024,12 +6491,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -6041,11 +6511,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &875516317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6132,7 +6597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489b3472042727f4bb0743eef5248490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTank: {fileID: 0}
 --- !u!4 &877306868
 Transform:
   m_ObjectHideFlags: 0
@@ -6283,12 +6747,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -6303,11 +6770,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &911438405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6508,12 +6970,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -6525,11 +6990,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &929485108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6775,12 +7235,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -6795,11 +7258,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &949085817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7008,6 +7466,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &971246873 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4468183295427704657, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+  m_PrefabInstance: {fileID: 42832823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983409322
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,12 +7561,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -7118,11 +7584,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &983409327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7260,12 +7721,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -7280,11 +7744,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &988348374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7437,12 +7896,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -7454,11 +7916,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1000561041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7611,12 +8068,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -7628,11 +8088,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1011309754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7774,12 +8229,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -7794,11 +8252,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1021558487
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7999,12 +8452,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8016,11 +8472,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1049998651
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8165,12 +8616,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8185,11 +8639,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1060995602
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8368,12 +8817,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8388,11 +8840,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1085076271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8552,12 +8999,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8572,11 +9022,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1095531261
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8736,12 +9181,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8756,11 +9204,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1103657709
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8913,12 +9356,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -8933,11 +9379,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1176664520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9097,12 +9538,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -9117,11 +9561,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1178909143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9252,6 +9691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c96199bf36c13942b3424c821ad574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHost: 0
   prefab: {fileID: 7104934208654128390, guid: f2083d490b56ee6439791d99943abe81, type: 3}
   playerTurn:
     m_InternalValue: 0
@@ -9517,12 +9957,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -9537,11 +9980,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1253716037
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9704,12 +10142,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -9724,11 +10165,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1270960236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9895,12 +10331,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -9915,11 +10354,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1285817175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10068,12 +10502,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -10088,11 +10525,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1290137409
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10237,12 +10669,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -10257,11 +10692,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1290631819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10432,12 +10862,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -10452,11 +10885,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1294398925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10623,12 +11051,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -10643,11 +11074,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1332703662
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10792,12 +11218,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -10809,11 +11238,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1339414952
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10981,12 +11405,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -11001,11 +11428,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1347271580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11243,12 +11665,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -11263,11 +11688,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1355562919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11547,12 +11967,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -11567,11 +11990,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1374596197
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11709,12 +12127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -11729,11 +12150,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1374951301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11871,12 +12287,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -11891,11 +12310,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1376059135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12077,12 +12491,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12094,11 +12511,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1389477669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12237,12 +12649,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12257,11 +12672,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1391944267
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12431,12 +12841,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12451,11 +12864,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1401301497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12603,12 +13011,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12620,11 +13031,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1404874571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12773,12 +13179,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12788,11 +13197,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1422465821
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12968,12 +13372,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -12985,11 +13392,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1430479307
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13137,12 +13539,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -13157,11 +13562,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1430557008
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13306,12 +13706,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -13326,11 +13729,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1431408241
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13479,12 +13877,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -13496,11 +13897,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1435593312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13648,12 +14044,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -13668,11 +14067,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1453049381
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13813,12 +14207,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -13833,11 +14230,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1471051297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13994,12 +14386,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14014,11 +14409,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1476749086
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14156,12 +14546,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14176,11 +14569,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1488783870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14328,12 +14716,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14348,11 +14739,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1499090126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14500,12 +14886,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14520,11 +14909,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1500434902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14672,12 +15056,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14689,11 +15076,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1507743263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14854,12 +15236,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -14874,11 +15259,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1525741630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15024,12 +15404,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15041,11 +15424,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1543239228
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15208,12 +15586,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15228,11 +15609,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1560317706
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15380,12 +15756,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15397,11 +15776,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1567045819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15540,12 +15914,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15560,11 +15937,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1570238469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15709,12 +16081,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15729,11 +16104,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1571093726
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15896,12 +16266,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -15916,11 +16289,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1592935293
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16066,12 +16434,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16086,11 +16457,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1594222303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16236,12 +16602,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16256,11 +16625,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1606185108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16401,12 +16765,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16421,11 +16788,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1610404461
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16573,12 +16935,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16588,11 +16953,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1611973616
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16800,12 +17160,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16817,11 +17180,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1647662392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16969,12 +17327,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -16986,11 +17347,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1666533146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17136,12 +17492,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -17156,11 +17515,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1667912419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17308,12 +17662,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -17328,11 +17685,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1674763497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17477,12 +17829,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -17497,11 +17852,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1678780618
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17646,12 +17996,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -17663,11 +18016,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1683222149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17813,12 +18161,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -17830,11 +18181,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1684977539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17983,12 +18329,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18003,11 +18352,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1687685728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18156,12 +18500,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18173,11 +18520,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1709076730
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18325,12 +18667,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18345,11 +18690,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1713229094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18512,12 +18852,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18532,11 +18875,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1724126379
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18674,12 +19012,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18694,11 +19035,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1726001165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18836,12 +19172,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -18856,11 +19195,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1727326305
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18998,12 +19332,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -19018,11 +19355,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1730234674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19164,12 +19496,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -19184,11 +19519,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1735752954
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19333,12 +19663,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -19350,11 +19683,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1752361887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19502,12 +19830,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -19522,11 +19853,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1755625267
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19690,12 +20016,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -19710,11 +20039,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1777147929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20143,12 +20467,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20163,11 +20490,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1822554205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20312,12 +20634,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20329,11 +20654,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1836812743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20474,12 +20794,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20494,11 +20817,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1848123236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20639,12 +20957,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20659,11 +20980,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1851077421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20801,12 +21117,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20821,11 +21140,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1859805260
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20967,12 +21281,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -20987,11 +21304,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1861021671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21132,12 +21444,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21152,11 +21467,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1861448378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21294,12 +21604,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21314,11 +21627,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1870072685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21460,12 +21768,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 0}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21477,11 +21788,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1876812891
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21630,12 +21936,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21647,11 +21956,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1883607825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21792,12 +22096,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 9}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21812,11 +22119,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1897904376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21961,12 +22263,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -21981,11 +22286,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1916174900
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22149,12 +22449,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -22169,11 +22472,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1922601471
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22318,12 +22616,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -22335,11 +22636,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1943258546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22477,12 +22773,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -22497,11 +22796,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1947352049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22646,12 +22940,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -22666,11 +22963,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1957851300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22815,12 +23107,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -22835,11 +23130,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1971994792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22980,12 +23270,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23000,11 +23293,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1975565176
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23142,12 +23430,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 10, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23162,11 +23453,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1976613962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23305,12 +23591,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23325,11 +23614,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1989256569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23474,12 +23758,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23494,11 +23781,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2010079551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23639,12 +23921,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23659,11 +23944,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2024012547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23811,12 +24091,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23828,11 +24111,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2026584525
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23978,12 +24256,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -23998,11 +24279,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2027479859
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24150,12 +24426,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24167,11 +24446,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2027829454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24317,12 +24591,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24334,11 +24611,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2041035626
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24483,12 +24755,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24498,11 +24773,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2049419356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24648,12 +24918,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 4}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24668,11 +24941,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2060116174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24813,12 +25081,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24830,11 +25101,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2060769434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24972,12 +25238,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 6, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -24992,11 +25261,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2062923038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25137,12 +25401,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -25157,11 +25424,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2064579652
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25299,12 +25561,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 1}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -25319,11 +25584,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2080098400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25469,12 +25729,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 1, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -25489,11 +25752,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2081901208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25642,12 +25900,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -25662,11 +25923,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2082243819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25815,12 +26071,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -25832,11 +26091,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2085195770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25984,12 +26238,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26001,11 +26258,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2089262512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26150,12 +26402,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26170,11 +26425,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2090264657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26322,12 +26572,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 4, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26342,11 +26595,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2093819834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26495,12 +26743,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 9, y: 0, z: 10}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26515,11 +26766,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2096228081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26668,12 +26914,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 7, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26688,11 +26937,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2104310002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26830,12 +27074,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 2, y: 0, z: 3}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -26850,11 +27097,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2115394337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26999,12 +27241,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 7}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27019,11 +27264,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2123360434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27168,12 +27408,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 5, y: 0, z: 11}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27185,11 +27428,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2124513680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27335,12 +27573,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 8, y: 0, z: 8}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27355,11 +27596,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2126346174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27500,12 +27736,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 2}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27517,11 +27756,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2130548546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27666,12 +27900,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 3, y: 0, z: 5}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27686,11 +27923,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2131679861
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27838,12 +28070,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 11, y: 0, z: 6}
-  isPlayerTurn: 1
   damaged: 0
   isDestroyed: 0
   isScanned: 0
   isWalkable: 1
   isOccupied:
+    m_InternalValue: 0
+  isOccupiedByClient:
+    m_InternalValue: 0
+  isOccupiedByHost:
     m_InternalValue: 0
   occupyingObject: {fileID: 0}
   destroyedObjectPrefab: {fileID: 3028969699355162548, guid: 2809003f9c2122c4a8685ca7f7c4a3d8, type: 3}
@@ -27855,11 +28090,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  destroyedNodeMesh: {fileID: 604459132154523733, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  destroyedNodeMaterial: {fileID: -5605289326131794027, guid: 472962ac35b8cde4a87bc7dd9e283b51, type: 3}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &2143639563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27995,6 +28225,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a7cca1588dc20c4e86b6495647da9af, type: 3}
+--- !u!1001 &6399375829456946904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6399375829323799920, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: onScreenInstructions
+      value: 
+      objectReference: {fileID: 145377966}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.2094584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.556654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.144312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799921, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799922, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2494766539
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799935, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_Name
+      value: TextChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799935, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
 --- !u!1 &7996633052552435243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5726609715371255005, guid: 2a7cca1588dc20c4e86b6495647da9af, type: 3}
@@ -28013,19 +28312,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7910125, y: 0.41040808, z: 0.82129735}
   m_Center: {x: -0.4246582, y: 0.22601494, z: -0.5135866}
---- !u!114 &7996633052552435247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7996633052552435243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2836676233
-  AlwaysReplicateAsRoot: 0
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
