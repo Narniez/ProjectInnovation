@@ -110,6 +110,8 @@ MonoBehaviour:
     m_InternalValue: 0
   hasMoved:
     m_InternalValue: 0
+  hasActions:
+    m_InternalValue: 0
   numMoves: 2
   canScan: 0
   hearts: {fileID: 0}
@@ -117,6 +119,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   explosion: {fileID: 6814719607927169929, guid: 2cdb87d05f2cf864eb3be0cb23bc5089, type: 3}
+  trail: {fileID: 8299804538703169724, guid: c007caec1a522574f8ade972c613ebeb, type: 3}
 --- !u!114 &5194654585556733493
 MonoBehaviour:
   m_ObjectHideFlags: 0

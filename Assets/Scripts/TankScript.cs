@@ -30,6 +30,7 @@ public class TankScript : NetworkBehaviour
     public LayerMask layerMask;
 
     public GameObject explosion;
+    public GameObject trail;
 
     void Start()
     {
@@ -139,6 +140,9 @@ public class TankScript : NetworkBehaviour
                 Vector3 destinationPos = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
                 MoveToNodeServerRpc(destinationPos);
                 numMoves--;
+                GameObject go = Instantiate(trail, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.5f), this.transform.rotation);
+                go.GetComponent<NetworkObject>().Spawn();
+                StartCoroutine(StopParticleSystem(go, 1));
 
                 if (numMoves <= 0)
                 {
@@ -163,9 +167,11 @@ public class TankScript : NetworkBehaviour
         while (transform.position != destinationPos)
         {
             // Move the tank towards the clicked node
+           
             transform.position = Vector3.MoveTowards(transform.position, destinationPos, speed * Time.deltaTime);
             yield return null;
         }
+       
         // Set the tank's position to the final destination
         transform.position = destinationPos;
     }
@@ -249,7 +255,6 @@ public class TankScript : NetworkBehaviour
                         Color[] originalColors = new Color[materials.Length];
                         for (var m = 0; m < renderer1.materials.Length; m++)
                         {
-
                             if (!node.isOccupied.Value)
                             {
                                 originalColors[m] = materials[m].color;
