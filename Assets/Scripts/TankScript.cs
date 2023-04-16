@@ -16,6 +16,9 @@ public class TankScript : NetworkBehaviour
     public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
+    public NetworkVariable<bool> hasActions = new(readPerm: NetworkVariableReadPermission.Everyone,
+        writePerm: NetworkVariableWritePermission.Server);
+
     private NetworkObject currentNode;
     public int numMoves = 2;
 
@@ -60,6 +63,7 @@ public class TankScript : NetworkBehaviour
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
+                hasActions.Value = true;
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
             }
 
@@ -68,8 +72,8 @@ public class TankScript : NetworkBehaviour
                 if (canShoot.Value && Input.GetMouseButtonDown(0))
                 {
                     TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                    ChangeTurnLogicServerRpc();
 
+                    ChangeTurnLogicServerRpc();
                 }
                 if (canInteract && tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
@@ -235,8 +239,8 @@ public class TankScript : NetworkBehaviour
             }
 
         }
+        hasActions.Value = false;
     }
-
 
     IEnumerator StopParticleSystem(GameObject particleSystem, float time)
     {
@@ -282,6 +286,10 @@ public class TankScript : NetworkBehaviour
                             }
                             else
                             {
+                                if (!IsOwner)
+                                {
+                                    StartCoroutine(Warning.Instance.displayTime(3));
+                                }
                                 originalColors[m] = materials[m].color;
                                 renderer1.materials[m].color = Color.blue;
                             }
