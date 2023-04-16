@@ -16,6 +16,9 @@ public class TankScript : NetworkBehaviour
     public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
+    public NetworkVariable<bool> hasActions = new(readPerm: NetworkVariableReadPermission.Everyone,
+        writePerm: NetworkVariableWritePermission.Server);
+
     private NetworkObject currentNode;
     public int numMoves = 2;
 
@@ -58,6 +61,7 @@ public class TankScript : NetworkBehaviour
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
+                hasActions.Value = true;
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
             }
 
@@ -66,8 +70,8 @@ public class TankScript : NetworkBehaviour
                 if (canShoot.Value && Input.GetMouseButtonDown(0))
                 {
                     TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                    ChangeTurnLogicServerRpc();
 
+                    ChangeTurnLogicServerRpc();
                 }
                 if (tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
@@ -174,9 +178,9 @@ public class TankScript : NetworkBehaviour
         {
 
             ServerCallingServerRpc(node);
-            GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0,node.transform.position.z),Quaternion.Euler(new Vector3(-90,0,0)));
+            GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0, node.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
             go.GetComponent<NetworkObject>().Spawn();
-           StartCoroutine(StopParticleSystem(go, 1));
+            StartCoroutine(StopParticleSystem(go, 1));
 
 
             if (node.isOccupied.Value)
@@ -206,8 +210,8 @@ public class TankScript : NetworkBehaviour
             }
 
         }
+        hasActions.Value = false;
     }
-
 
     IEnumerator StopParticleSystem(GameObject particleSystem, float time)
     {
@@ -253,6 +257,10 @@ public class TankScript : NetworkBehaviour
                             }
                             else
                             {
+                                if (!IsOwner)
+                                {
+                                    StartCoroutine(Warning.Instance.displayTime(3));
+                                }
                                 originalColors[m] = materials[m].color;
                                 renderer1.materials[m].color = Color.blue;
                             }

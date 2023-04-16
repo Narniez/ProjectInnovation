@@ -413,6 +413,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4468183295381651152, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4468183295427704657, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -500,6 +504,10 @@ PrefabInstance:
     - target: {fileID: 4468183295427704661, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183296515453992, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8695860263995356362, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_IsActive
@@ -1057,6 +1065,7 @@ GameObject:
   - component: {fileID: 140252599}
   - component: {fileID: 140252598}
   - component: {fileID: 140252600}
+  - component: {fileID: 140252601}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -1137,8 +1146,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 362844029}
   uiText: {fileID: 116216241}
-  duration: 3
-  time: 0
+  duration: 20
+  time: 20
+  actualTime: 20
+  tank: {fileID: 0}
+  tank2: {fileID: 0}
+--- !u!114 &140252601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140252596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1132046510
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!4 &143793684
 Transform:
   m_ObjectHideFlags: 0
@@ -27714,7 +27742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399375829323799935, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
