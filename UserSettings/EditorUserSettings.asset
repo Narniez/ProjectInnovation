@@ -6,7 +6,15 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
+<<<<<<< HEAD
+<<<<<<< main
       value: 0601575304000a09595b0f7013225b44454f1c292d2a706829784b6bbab0303d
+=======
+      value: 0552500506560d5e5c0c082611730a444516407d2d2b71677a2c4d32b5e63160
+>>>>>>> Added a timer and warning when scanned
+=======
+      value: 0552500506560d5e5c0c082611730a444516407d2d2b71677a2c4d32b5e63160
+>>>>>>> TimerAndSpotWarrning
       flags: 0
     RecentlyUsedSceneGuid-1:
       value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a

@@ -7,7 +7,7 @@ public class ServerScript : NetworkBehaviour
     public static ServerScript instance;
     public GameObject prefab;
     public NetworkVariable<bool> playerTurn =
-        new(writePerm: NetworkVariableWritePermission.Server,
+        new(false, writePerm: NetworkVariableWritePermission.Server,
         readPerm: NetworkVariableReadPermission.Everyone);
 
     // Start is called before the first frame update

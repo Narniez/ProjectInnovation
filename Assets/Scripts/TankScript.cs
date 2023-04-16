@@ -16,6 +16,9 @@ public class TankScript : NetworkBehaviour
     public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
+    public NetworkVariable<bool> hasActions = new(readPerm: NetworkVariableReadPermission.Everyone,
+        writePerm: NetworkVariableWritePermission.Server);
+
     private NetworkObject currentNode;
     public int numMoves = 2;
 
@@ -27,6 +30,7 @@ public class TankScript : NetworkBehaviour
     public LayerMask layerMask;
 
     public GameObject explosion;
+    public GameObject trail;
 
     public bool canInteract;
 
@@ -60,6 +64,7 @@ public class TankScript : NetworkBehaviour
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
+                hasActions.Value = true;
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
             }
 
@@ -68,8 +73,8 @@ public class TankScript : NetworkBehaviour
                 if (canShoot.Value && Input.GetMouseButtonDown(0))
                 {
                     TankShootServerRpc(hit.collider.gameObject.GetComponent<Node>());
-                    ChangeTurnLogicServerRpc();
 
+                    ChangeTurnLogicServerRpc();
                 }
                 if (canInteract && tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
@@ -153,6 +158,10 @@ public class TankScript : NetworkBehaviour
                 MoveToNodeServerRpc(destinationPos);
 
                 numMoves--;
+                GameObject go = Instantiate(trail, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.5f), this.transform.rotation);
+                go.GetComponent<NetworkObject>().Spawn();
+                StartCoroutine(StopParticleSystem(go, 1));
+
                 if (numMoves <= 0)
                 {
                     hasMoved.Value = true;
@@ -184,9 +193,11 @@ public class TankScript : NetworkBehaviour
         while (transform.position != destinationPos)
         {
             // Move the tank towards the clicked node
+           
             transform.position = Vector3.MoveTowards(transform.position, destinationPos, speed * Time.deltaTime);
             yield return null;
         }
+       
         // Set the tank's position to the final destination
         transform.position = destinationPos;
         if (transform.position == destinationPos)
@@ -235,8 +246,8 @@ public class TankScript : NetworkBehaviour
             }
 
         }
+        hasActions.Value = false;
     }
-
 
     IEnumerator StopParticleSystem(GameObject particleSystem, float time)
     {
@@ -274,7 +285,6 @@ public class TankScript : NetworkBehaviour
                         Color[] originalColors = new Color[materials.Length];
                         for (var m = 0; m < renderer1.materials.Length; m++)
                         {
-
                             if (!node.isOccupied.Value)
                             {
                                 originalColors[m] = materials[m].color;
@@ -282,6 +292,10 @@ public class TankScript : NetworkBehaviour
                             }
                             else
                             {
+                                if (!IsOwner)
+                                {
+                                    StartCoroutine(Warning.Instance.displayTime(3));
+                                }
                                 originalColors[m] = materials[m].color;
                                 renderer1.materials[m].color = Color.blue;
                             }
