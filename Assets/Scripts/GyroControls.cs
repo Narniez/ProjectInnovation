@@ -20,6 +20,7 @@ public class GyroControls : MonoBehaviour
         //Debug.Log(Input.gyro.attitude.y);
         if (Input.GetMouseButtonDown(0))
         {
+
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
