@@ -28,6 +28,8 @@ public class TankScript : NetworkBehaviour
 
     public GameObject explosion;
 
+    public bool canInteract;
+
     void Start()
     {
         if (!IsOwner) return;
@@ -69,16 +71,11 @@ public class TankScript : NetworkBehaviour
                     ChangeTurnLogicServerRpc();
 
                 }
-                if (tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
+                if (canInteract && tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
                     MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
                 }
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            canShoot.Value = !canShoot.Value;
         }
     }
 
@@ -106,6 +103,7 @@ public class TankScript : NetworkBehaviour
     {
         if (curNode.TryGet<Node>(out Node nodee))
         {
+            canInteract = true;
             currentNode = nodee.NetworkObject;
             currentNode.GetComponent<Node>().isOccupied.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
@@ -118,12 +116,29 @@ public class TankScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void MoveServerRpc(NetworkBehaviourReference selectedNode)
     {
-        if (hasMoved.Value) return;
+        if (hasMoved.Value || !canInteract) return;
+        //if (!ServerScript.instance.playerTurn.Value)
+        //{
+        //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Move);
+        //}
+        //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Move); }
 
         if (selectedNode.TryGet<Node>(out Node nodee))
         {
             if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1 && nodee.isWalkable && !nodee.isOccupied.Value)
             {
+                // Determine which direction to rotate towards
+                Vector3 targetDirection = transform.position - nodee.position;
+
+                // The step size is equal to speed times frame time.
+                float singleStep = 10;
+
+                // Rotate the forward vector towards the target direction by one step
+                Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+                // Calculate a rotation a step closer to the target and applies rotation to this object
+                transform.rotation = Quaternion.LookRotation(newDirection + new Vector3(0, 180, 0));
+
                 PlayerCloseDetection.checkDistance?.Invoke();
                 currentNode.GetComponent<Node>().isOccupied.Value = false;
                 currentNode.GetComponent<Node>().occupyingObject = null;
@@ -132,14 +147,23 @@ public class TankScript : NetworkBehaviour
                 currentNode.GetComponent<Node>().isOccupied.Value = true;
                 currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
 
-                Vector3 destinationPos = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
-                MoveToNodeServerRpc(destinationPos);
-                numMoves--;
 
+                Vector3 destinationPos = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
+
+                MoveToNodeServerRpc(destinationPos);
+
+                numMoves--;
                 if (numMoves <= 0)
                 {
                     hasMoved.Value = true;
                     canShoot.Value = true;
+                    //if (!ServerScript.instance.playerTurn.Value)
+                    //{
+                    //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Attack);
+                    //}
+                    //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Attack); }
+
+
                 }
             }
         }
@@ -154,6 +178,7 @@ public class TankScript : NetworkBehaviour
 
     IEnumerator MoveTowardsNode(Vector3 destinationPos)
     {
+        canInteract = false;
         // Set the tank's speed
         float speed = 2f;
         while (transform.position != destinationPos)
@@ -164,6 +189,11 @@ public class TankScript : NetworkBehaviour
         }
         // Set the tank's position to the final destination
         transform.position = destinationPos;
+        if (transform.position == destinationPos)
+        {
+            canInteract = true;
+            Debug.Log("stignah");
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -174,10 +204,9 @@ public class TankScript : NetworkBehaviour
         {
 
             ServerCallingServerRpc(node);
-            GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0,node.transform.position.z),Quaternion.Euler(new Vector3(-90,0,0)));
+            GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0, node.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
             go.GetComponent<NetworkObject>().Spawn();
-           StartCoroutine(StopParticleSystem(go, 1));
-
+            StartCoroutine(StopParticleSystem(go, 1));
 
             if (node.isOccupied.Value)
             {
@@ -281,11 +310,18 @@ public class TankScript : NetworkBehaviour
 
     IEnumerator TurnChange()
     {
+        //if (!ServerScript.instance.playerTurn.Value)
+        //{
+        //    CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Idle);
+        //}
+        //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Idle); }
+
         yield return new WaitForSeconds(1f);
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
         canShoot.Value = false;
         hasMoved.Value = false;
         numMoves = 2;
+
     }
 
 }
