@@ -51,13 +51,7 @@ public class Timer : NetworkBehaviour
         {
             StartTimerServerRpc(playerText);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-            //canStart = true;
 
-            if (canStart)
-            {
-                ResetTimer();
-            }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -79,14 +73,6 @@ public class Timer : NetworkBehaviour
     {
         time -= Time.fixedDeltaTime;
         uiText.fillAmount -= 1.0f / duration * Time.fixedDeltaTime;
-
-        // Check if any player has moved or shot, and reset timer if true
-        if (tankS.hasMoved.Value && !tankS.canShoot.Value || (tank2S != null && (tank2S.hasMoved.Value && !tank2S.canShoot.Value)))
-        {
-            Debug.Log("TUKA E BUGA BATKO BQGAI");
-            //ResetTimer();
-            //return;
-        }
         timerText.text = timeText + time.ToString("00:00");
         if (time <= 0)
         {

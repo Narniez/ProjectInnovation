@@ -16,7 +16,7 @@ public class TankScript : NetworkBehaviour
     public NetworkVariable<bool> hasMoved = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
-    public NetworkVariable<bool> hasActions = new(readPerm: NetworkVariableReadPermission.Everyone,
+    public NetworkVariable<bool> canInteract = new(readPerm: NetworkVariableReadPermission.Everyone,
         writePerm: NetworkVariableWritePermission.Server);
 
     private NetworkObject currentNode;
@@ -31,8 +31,6 @@ public class TankScript : NetworkBehaviour
 
     public GameObject explosion;
     public GameObject trail;
-
-    public bool canInteract;
 
     void Start()
     {
@@ -64,7 +62,6 @@ public class TankScript : NetworkBehaviour
         {
             if (IsOwnedByServer && !ServerScript.instance.playerTurn.Value)
             {
-                hasActions.Value = true;
                 PlayerTurnsServerRpc(hit.collider.gameObject.GetComponent<Node>());
             }
 
@@ -76,7 +73,7 @@ public class TankScript : NetworkBehaviour
 
                     ChangeTurnLogicServerRpc();
                 }
-                if (canInteract && tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
+                if (tankPlaced.Value && !hasMoved.Value && Input.GetMouseButtonDown(0))
                 {
                     MoveServerRpc(hit.collider.gameObject.GetComponent<Node>());
                 }
@@ -108,7 +105,7 @@ public class TankScript : NetworkBehaviour
     {
         if (curNode.TryGet<Node>(out Node nodee))
         {
-            canInteract = true;
+            canInteract.Value = true;
             currentNode = nodee.NetworkObject;
             currentNode.GetComponent<Node>().isOccupied.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
@@ -121,7 +118,7 @@ public class TankScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void MoveServerRpc(NetworkBehaviourReference selectedNode)
     {
-        if (hasMoved.Value || !canInteract) return;
+        if (hasMoved.Value || !canInteract.Value) return;
         //if (!ServerScript.instance.playerTurn.Value)
         //{
         //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Move);
@@ -187,7 +184,7 @@ public class TankScript : NetworkBehaviour
 
     IEnumerator MoveTowardsNode(Vector3 destinationPos)
     {
-        canInteract = false;
+        canInteract.Value = false;
         // Set the tank's speed
         float speed = 2f;
         while (transform.position != destinationPos)
@@ -202,7 +199,7 @@ public class TankScript : NetworkBehaviour
         transform.position = destinationPos;
         if (transform.position == destinationPos)
         {
-            canInteract = true;
+            canInteract.Value = true;
             Debug.Log("stignah");
         }
     }
@@ -246,7 +243,6 @@ public class TankScript : NetworkBehaviour
             }
 
         }
-        hasActions.Value = false;
     }
 
     IEnumerator StopParticleSystem(GameObject particleSystem, float time)
@@ -324,18 +320,11 @@ public class TankScript : NetworkBehaviour
 
     IEnumerator TurnChange()
     {
-        //if (!ServerScript.instance.playerTurn.Value)
-        //{
-        //    CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Idle);
-        //}
-        //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Idle); }
-        Debug.Log("CHANGE PLAYER TURN");
         yield return new WaitForSeconds(1f);
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
         canShoot.Value = false;
         hasMoved.Value = false;
         numMoves = 2;
-
     }
 
 }
