@@ -376,6 +376,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4468183295322731524, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 601866967, guid: 275e132cc6d82094f9c2cf2c549ebd5f, type: 3}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -1578342414, guid: 275e132cc6d82094f9c2cf2c549ebd5f, type: 3}
+    - target: {fileID: 4468183295322731525, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4468183295427704657, guid: 8763fd410d8330e43ab41ac05a01efe7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
