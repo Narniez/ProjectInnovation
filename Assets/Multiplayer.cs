@@ -29,11 +29,19 @@ public class Multiplayer : NetworkBehaviour
         {
             toggleCheck = GameObject.Find("ReadyCheckPlayer1");
             readyToPlay.Value = toggleCheck.GetComponent<Toggle>().isOn;
+<<<<<<< refs/remotes/origin/Relay
+=======
+            this.transform.position = pos[0];
+>>>>>>> More fixes
         }
         else
         {
             toggleCheck = GameObject.Find("ReadyCheckPlayer2");
             readyToPlay.Value = toggleCheck.GetComponent<Toggle>().isOn;
+<<<<<<< refs/remotes/origin/Relay
+=======
+            this.transform.position = pos[1];
+>>>>>>> More fixes
         }
     }
 
@@ -107,10 +115,18 @@ public class Multiplayer : NetworkBehaviour
     {
         if (!IsOwner) return;
         if (everyoneReady.Value)
+<<<<<<< refs/remotes/origin/Relay
             timer -= Time.fixedDeltaTime;
 
         if (timer <= 0)
         {
+=======
+            timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            Debug.Log("bla bla");
+>>>>>>> More fixes
             return;
         }
     }
