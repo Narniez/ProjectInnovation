@@ -34,7 +34,7 @@ public class RelayConnectionScript : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("A player logged in! " + AuthenticationService.Instance.PlayerId);
-            playerNameText[0].text = PlayerPrefs.GetString("nickname");
+            //playerNameText[0].text = PlayerPrefs.GetString("nickname");
         };
 
         clienJoinButton.onClick.AddListener(JoinRelay);        
@@ -42,8 +42,8 @@ public class RelayConnectionScript : MonoBehaviour
 
     public async void CreateRelay()
     {
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
         try
         {
             //if (nicknameInputField.text.Length < 3) return;
@@ -65,7 +65,7 @@ public class RelayConnectionScript : MonoBehaviour
                 a.ConnectionData
                 );
 
-            //NetworkManager.Singleton.StartHost();
+            NetworkManager.Singleton.StartHost();
         }
         catch (RelayServiceException e)
         {
@@ -75,6 +75,7 @@ public class RelayConnectionScript : MonoBehaviour
 
     public async void JoinRelay()
     {
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
         try
         {
             JoinAllocation a = await RelayService.Instance.JoinAllocationAsync(codeInputField.text);
@@ -86,11 +87,15 @@ public class RelayConnectionScript : MonoBehaviour
                 a.Key,
                 a.ConnectionData,
                 a.HostConnectionData);
-            //NetworkManager.Singleton.StartClient();
+            NetworkManager.Singleton.StartClient();
         }
         catch (RelayServiceException e)
         {
             throw e;
         }
+    }
+
+    public void LobbyScene() { 
+        
     }
 }
