@@ -104,13 +104,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.84649104, y: 0.952833, z: 1, w: 0}
+    value: {x: 1, y: 0.93247825, z: 0.747518, w: -0.038350914}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.4175539, z: 0.46886128, w: 0}
+    value: {x: 1, y: 0.7422535, z: 0.6983384, w: -0.09587729}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.9768641, z: 0.9793089, w: 0}
+    value: {x: 1, y: 0.6904285, z: 0.38657337, w: 0.32598278}
   masterCurve:
     overrideState: 1
     value:
@@ -1339,34 +1339,6 @@ MonoBehaviour:
   lumContrib:
     overrideState: 1
     value: 0.8
---- !u!114 &-893831368812299283
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  focusDistance:
-    overrideState: 1
-    value: 4.17
-  aperture:
-    overrideState: 1
-    value: 1.9
-  focalLength:
-    overrideState: 1
-    value: 105
-  kernelSize:
-    overrideState: 1
-    value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,7 +1355,6 @@ MonoBehaviour:
   - {fileID: 1511938367740655745}
   - {fileID: 3013090130542950253}
   - {fileID: 1212462866467174448}
-  - {fileID: -893831368812299283}
   - {fileID: -3447057376033333478}
   - {fileID: -7774370235027354008}
 --- !u!114 &1212462866467174448
@@ -1408,7 +1379,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.116
+    value: 0.08
   fastMode:
     overrideState: 1
     value: 0
@@ -1433,16 +1404,16 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.46101815, g: 0.4749827, b: 0.5283019, a: 1}
+    value: {r: 0.6509434, g: 0.594907, b: 0.4267978, a: 1}
   center:
     overrideState: 1
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.874
   smoothness:
     overrideState: 1
-    value: 0.408
+    value: 0.388
   roundness:
     overrideState: 1
     value: 0.804
@@ -1474,7 +1445,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 42.2
+    value: 39.11
   threshold:
     overrideState: 1
     value: 1
