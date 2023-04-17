@@ -39,21 +39,25 @@ public class CameraBehaviour : NetworkBehaviour
 
     public void CameraChange()
     {
-        if (cam != null)
-        {
-            zoom = !zoom;
-        }
+        //if (cam != null)
+        //{
+        //    zoom = !zoom;
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
         if (tank == null) return;
-        if (zoom) { 
-            ZoomIn(20); 
-            this.transform.position = new Vector3(tank.transform.position.x, this.transform.position.y, tank.transform.position.z);
+        Debug.Log(zoom);
+        if (zoom)
+        {
+            ZoomIn(20);
+            if (!GyroControls.Instance.gyroControl)
+                this.transform.position = new Vector3(tank.transform.position.x, this.transform.position.y, tank.transform.position.z);
         }
-        else { 
+        else
+        {
             ZoomOut(60);
             this.transform.position = new Vector3(5, 11.5f, 5.6f);
         }

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 using Unity.Netcode;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class CameraSettings : NetworkBehaviour

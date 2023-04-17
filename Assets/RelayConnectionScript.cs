@@ -20,6 +20,9 @@ public class RelayConnectionScript : MonoBehaviour
     public Button clienJoinButton;
     public string nickname;
 
+    public GameObject mainMenuCanvas;
+    public GameObject HUDCanvas;
+
     private const int _MaxPlayers = 2;
 
     private async void Start()
@@ -29,28 +32,22 @@ public class RelayConnectionScript : MonoBehaviour
         //    nicknameInputField.text = PlayerPrefs.GetString("nickname");
         //}
 
-        
+
         await UnityServices.InitializeAsync();
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("A player logged in! " + AuthenticationService.Instance.PlayerId);
-            //playerNameText[0].text = PlayerPrefs.GetString("nickname");
         };
 
-        clienJoinButton.onClick.AddListener(JoinRelay);        
+        clienJoinButton.onClick.AddListener(JoinRelay);
     }
 
     public async void CreateRelay()
     {
 
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
         try
         {
-            //if (nicknameInputField.text.Length < 3) return;
-            //else {
-            //    nickname = nicknameInputField.text;
-            //    PlayerPrefs.SetString("nickname", nickname);
-            //}
             //Create a new relay with _MaxPlayers
             Allocation a = await RelayService.Instance.CreateAllocationAsync(_MaxPlayers);
 
@@ -75,9 +72,12 @@ public class RelayConnectionScript : MonoBehaviour
 
     public async void JoinRelay()
     {
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        
+        if (codeInputField.text == null) return;
+        
         try
         {
+
             JoinAllocation a = await RelayService.Instance.JoinAllocationAsync(codeInputField.text);
 
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetClientRelayData(
@@ -88,6 +88,8 @@ public class RelayConnectionScript : MonoBehaviour
                 a.ConnectionData,
                 a.HostConnectionData);
             NetworkManager.Singleton.StartClient();
+            mainMenuCanvas.SetActive(false);
+            HUDCanvas.SetActive(true);
         }
         catch (RelayServiceException e)
         {
@@ -95,7 +97,8 @@ public class RelayConnectionScript : MonoBehaviour
         }
     }
 
-    public void LobbyScene() { 
-        
+    public void LobbyScene()
+    {
+
     }
 }

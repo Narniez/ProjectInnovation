@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TankScript : NetworkBehaviour
 {
@@ -32,9 +33,20 @@ public class TankScript : NetworkBehaviour
     public GameObject explosion;
     public GameObject trail;
 
+    public Button zoomButton;
+
+    [Header("Sounds")]
+    public AudioSource soundEffects;
+
+    public AudioClip shooting;
+    public AudioClip moving;
+    public AudioClip zoomInSounds;
+    public AudioClip zoomOutSounds;
+
     void Start()
     {
         if (!IsOwner) return;
+        zoomButton = GameObject.Find("ZoomButton").GetComponent<Button>();
         _playerDead = GetComponent<PlayerDead>();
         hearts = GameObject.FindGameObjectWithTag("hearts");
         hearts.GetComponent<Hearts>().tank = this.gameObject;
@@ -46,6 +58,8 @@ public class TankScript : NetworkBehaviour
         if (!IsOwner) return;
         hearts.gameObject.GetComponent<Hearts>().currentHealth = tankHealth.Value;
         _playerDead.TankDead(tankHealth.Value);
+        //CameraZoomBehavServerRpc();
+       //neshtoServerRpc(true);
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -82,6 +96,21 @@ public class TankScript : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    void CameraZoomBehavServerRpc()
+    {
+        CameraZoomBehavClientRpc();
+    }
+
+    [ClientRpc]
+    void CameraZoomBehavClientRpc()
+    {
+        if (!IsOwner) return;
+        soundEffects.PlayOneShot(zoomOutSounds);
+        GyroControls.Instance.gyroControl = false;
+        CameraBehaviour.instance.zoom = false;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
     void PlayerTurnsServerRpc(NetworkBehaviourReference hit)
     {
         if (tankPlaced.Value && !canShoot.Value && Input.GetMouseButtonDown(0))
@@ -105,30 +134,33 @@ public class TankScript : NetworkBehaviour
     {
         if (curNode.TryGet<Node>(out Node nodee))
         {
+            CameraClientRpc();
             canInteract.Value = true;
             currentNode = nodee.NetworkObject;
             currentNode.GetComponent<Node>().isOccupied.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
             this.transform.position = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
-            // this.transform.rotation = Quaternion.Euler(-90,0,0);
             tankPlaced.Value = true;
         }
+    }
+
+    [ClientRpc]
+    void CameraClientRpc()
+    {
+        if (!IsOwner) return;
+        CameraBehaviour.instance.zoom = true;
     }
 
     [ServerRpc(RequireOwnership = false)]
     void MoveServerRpc(NetworkBehaviourReference selectedNode)
     {
         if (hasMoved.Value || !canInteract.Value) return;
-        //if (!ServerScript.instance.playerTurn.Value)
-        //{
-        //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Move);
-        //}
-        //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Move); }
 
         if (selectedNode.TryGet<Node>(out Node nodee))
         {
             if (Vector3.Distance(nodee.gameObject.transform.position, currentNode.gameObject.transform.position) <= 1 && nodee.isWalkable && !nodee.isOccupied.Value)
             {
+
                 // Determine which direction to rotate towards
                 Vector3 targetDirection = transform.position - nodee.position;
 
@@ -156,20 +188,15 @@ public class TankScript : NetworkBehaviour
 
                 numMoves--;
                 GameObject go = Instantiate(trail, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.5f), this.transform.rotation);
-                go.GetComponent<NetworkObject>().Spawn();
+                //go.GetComponent<NetworkObject>().Spawn();
                 StartCoroutine(StopParticleSystem(go, 1));
 
                 if (numMoves <= 0)
                 {
                     hasMoved.Value = true;
                     canShoot.Value = true;
-                    //if (!ServerScript.instance.playerTurn.Value)
-                    //{
-                    //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Attack);
-                    //}
-                    //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Attack); }
-
-
+                    //zoomButton.interactable = false;
+                    GyroControls.Instance.gyroControl = true;
                 }
             }
         }
@@ -178,9 +205,10 @@ public class TankScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void MoveToNodeServerRpc(Vector3 destination)
     {
+        soundEffects.PlayOneShot(moving);
         StartCoroutine(MoveTowardsNode(destination));
-    }
 
+    }
 
     IEnumerator MoveTowardsNode(Vector3 destinationPos)
     {
@@ -190,15 +218,15 @@ public class TankScript : NetworkBehaviour
         while (transform.position != destinationPos)
         {
             // Move the tank towards the clicked node
-           
             transform.position = Vector3.MoveTowards(transform.position, destinationPos, speed * Time.deltaTime);
             yield return null;
         }
-       
+
         // Set the tank's position to the final destination
         transform.position = destinationPos;
         if (transform.position == destinationPos)
         {
+            soundEffects.Stop();
             canInteract.Value = true;
             Debug.Log("stignah");
         }
@@ -210,7 +238,6 @@ public class TankScript : NetworkBehaviour
         bool canTakeFullDmg = false;
         if (nodeToShoot.TryGet<Node>(out Node node))
         {
-
             ServerCallingServerRpc(node);
             GameObject go = Instantiate(explosion, new Vector3(node.transform.position.x, 0, node.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
             go.GetComponent<NetworkObject>().Spawn();
@@ -241,7 +268,8 @@ public class TankScript : NetworkBehaviour
                     }
                 }
             }
-
+            soundEffects.PlayOneShot(shooting);
+            CameraZoomBehavServerRpc();
         }
     }
 

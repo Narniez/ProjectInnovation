@@ -3,61 +3,24 @@ using System;
 
 public class GyroControls : MonoBehaviour
 {
-    public static event Action<GameObject> ObjectClicked;
+    public static GyroControls Instance;
+    public bool gyroControl;
 
-    private Camera mainCamera;
-
-    Vector3 oldPos;
     [SerializeField] private float movementSpeed = 1f;
-    void Start()
+
+    private void Awake()
     {
-        mainCamera = Camera.main;
-        Input.gyro.enabled = true;
+        Instance = this;
     }
 
-    void Update()
+    void Start()
     {
-        //Debug.Log(Input.gyro.attitude.y);
-        if (Input.GetMouseButtonDown(0))
-        {
-
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject clickedObject = hit.transform.gameObject;
-                Renderer renderer = clickedObject.GetComponent<Renderer>();
-
-                if (renderer != null)
-                {
-                    renderer.material.color = UnityEngine.Random.ColorHSV();
-                    ObjectClicked?.Invoke(clickedObject);
-                }
-            }
-        }
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Ray ray = mainCamera.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject clickedObject = hit.transform.gameObject;
-                Renderer renderer = clickedObject.GetComponent<Renderer>();
-
-                if (renderer != null)
-                {
-                    renderer.material.color = UnityEngine.Random.ColorHSV();
-                    ObjectClicked?.Invoke(clickedObject);
-                }
-            }
-        }
+        Input.gyro.enabled = true;
     }
 
     private void LateUpdate()
     {
+        if (!gyroControl) return;
         GyrohilikopterControl();
     }
 
@@ -67,22 +30,21 @@ public class GyroControls : MonoBehaviour
         // Update the camera's position based on the gyroscope data
         Vector3 newPosition = transform.position;
 
-
         if (Input.gyro.attitude.x > 0.2f)
-        {
-            newPosition.z += movementSpeed * Time.deltaTime;
-        }
-        if (Input.gyro.attitude.x < -0.2f)
-        {
-            newPosition.z -= movementSpeed * Time.deltaTime;
-        } 
-        if (Input.gyro.attitude.y > 0.2f)
         {
             newPosition.x -= movementSpeed * Time.deltaTime;
         }
-        if (Input.gyro.attitude.y < -0.2f)
+        if (Input.gyro.attitude.x < -0.2f)
         {
             newPosition.x += movementSpeed * Time.deltaTime;
+        } 
+        if (Input.gyro.attitude.y > 0.2f)
+        {
+            newPosition.z -= movementSpeed * Time.deltaTime;
+        }
+        if (Input.gyro.attitude.y < -0.2f)
+        {
+            newPosition.z += movementSpeed * Time.deltaTime;
         }
         transform.position = newPosition;
     }
