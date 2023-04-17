@@ -610,14 +610,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146720825}
-  m_LocalRotation: {x: 0.220855, y: -0.48584494, z: 0.12836032, w: 0.8358836}
-  m_LocalPosition: {x: 6.621729, y: 6.3479514, z: 6.7373486}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 5.4255953, y: 7.5049596, z: 7.208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.576, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1001 &2688607543716434209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -628,6 +628,26 @@ PrefabInstance:
     - target: {fileID: 2013749134185126903, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
       propertyPath: m_Name
       value: Fire Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688607543406900440, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 12.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688607543406900440, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
+      propertyPath: ClampVelocityModule.dampen
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688607543406900440, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
+      propertyPath: ClampVelocityModule.drag.scalar
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688607543406900440, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
+      propertyPath: ClampVelocityModule.magnitude.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688607543406900440, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
+      propertyPath: ClampVelocityModule.magnitude.minScalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3295151671169319178, guid: 113057b1581186940b348ecd79cb7f08, type: 3}
       propertyPath: m_RootOrder
