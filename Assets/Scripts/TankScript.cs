@@ -329,7 +329,7 @@ public class TankScript : NetworkBehaviour
         //    CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Idle);
         //}
         //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Idle); }
-
+        Debug.Log("CHANGE PLAYER TURN");
         yield return new WaitForSeconds(1f);
         ServerScript.instance.playerTurn.Value = !ServerScript.instance.playerTurn.Value;
         canShoot.Value = false;
