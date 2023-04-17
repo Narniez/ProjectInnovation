@@ -12,6 +12,8 @@ public class RelayConnectionScript : MonoBehaviour
 {
     public TextMeshProUGUI codeText;
 
+    public TextMeshProUGUI[] playerNameText;
+
     public TMP_InputField codeInputField;
     public TMP_InputField nicknameInputField;
 
@@ -22,24 +24,33 @@ public class RelayConnectionScript : MonoBehaviour
 
     private async void Start()
     {
+        //if (PlayerPrefs.GetString("nickname") != null) { 
+        //    nickname = PlayerPrefs.GetString("nickname");
+        //    nicknameInputField.text = PlayerPrefs.GetString("nickname");
+        //}
+
+        
         await UnityServices.InitializeAsync();
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("A player logged in! " + AuthenticationService.Instance.PlayerId);
+            playerNameText[0].text = PlayerPrefs.GetString("nickname");
         };
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
         clienJoinButton.onClick.AddListener(JoinRelay);        
     }
 
     public async void CreateRelay()
     {
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
         try
         {
-            if (nicknameInputField.text.Length < 3) return;
-            else {
-                nickname = nicknameInputField.text;
-            }
+            //if (nicknameInputField.text.Length < 3) return;
+            //else {
+            //    nickname = nicknameInputField.text;
+            //    PlayerPrefs.SetString("nickname", nickname);
+            //}
             //Create a new relay with _MaxPlayers
             Allocation a = await RelayService.Instance.CreateAllocationAsync(_MaxPlayers);
 
