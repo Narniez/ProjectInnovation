@@ -27732,6 +27732,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6399375829323799920, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
+      propertyPath: tank
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399375829323799920, guid: 3f3fe7b46e501414d88fc1f1bd37dabe, type: 3}
       propertyPath: onScreenInstructions
       value: 
       objectReference: {fileID: 145377966}
