@@ -1,7 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-public class Warning : MonoBehaviour
+using Unity.Netcode;
+public class Warning : NetworkBehaviour
 {
     public static Warning Instance;
     public string warningText;
@@ -23,28 +24,20 @@ public class Warning : MonoBehaviour
         generatedWarning = Instantiate(warningPrefab);
         generatedWarning.transform.position = transform.position;
         generatedWarning.transform.localScale = transform.localScale / 1.5f;
+        generatedWarning.GetComponent<TextMeshProUGUI>().text = warningText;
     }
 
     // Update is called once per frame
     void Update()
     {
-        generatedWarning.GetComponent<TextMeshProUGUI>().text = warningText;
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            canShowText = true;
-            if (canShowText)
-            {
-                StartCoroutine(displayTime(3));
-            }
-        }
     }
 
     public IEnumerator displayTime(float time)
     {
+        if (IsOwner) yield break;
         generatedWarning.SetActive(true);
         generatedWarning.transform.SetParent(transform);
         yield return new WaitForSeconds(time);
         generatedWarning.SetActive(false);
-        canShowText = false;
     }
 }

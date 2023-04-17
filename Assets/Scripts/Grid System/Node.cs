@@ -12,11 +12,16 @@ public class Node : NetworkBehaviour
     public bool isWalkable = true;
 
     public NetworkVariable<bool> isOccupied = new(false, readPerm: NetworkVariableReadPermission.Everyone, 
-        writePerm: NetworkVariableWritePermission.Owner);
+        writePerm: NetworkVariableWritePermission.Server);
+
+    public NetworkVariable<bool> isOccupiedByClient = new(false, readPerm: NetworkVariableReadPermission.Everyone,
+    writePerm: NetworkVariableWritePermission.Server);
+
+    public NetworkVariable<bool> isOccupiedByHost = new(false, readPerm: NetworkVariableReadPermission.Everyone,
+    writePerm: NetworkVariableWritePermission.Server);
 
     public GameObject occupyingObject = null;
     public GameObject destroyedObjectPrefab;
-
     public int row;
     public int column;
     public List<Node> neighbours = new List<Node>();

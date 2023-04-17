@@ -23,7 +23,10 @@ public class TankScript : NetworkBehaviour
     private NetworkObject currentNode;
     public int numMoves = 2;
 
+    public bool canBePlaced = false;
     public bool canScan = false;
+
+
 
     public GameObject hearts;
 
@@ -45,6 +48,7 @@ public class TankScript : NetworkBehaviour
 
     void Start()
     {
+        GameObject tank = this.gameObject;
         if (!IsOwner) return;
         zoomButton = GameObject.Find("ZoomButton").GetComponent<Button>();
         _playerDead = GetComponent<PlayerDead>();
@@ -52,6 +56,7 @@ public class TankScript : NetworkBehaviour
         hearts.GetComponent<Hearts>().tank = this.gameObject;
         //GyroControls.ObjectClicked += OnObjectClicked;
     }
+
 
     void Update()
     {
@@ -66,9 +71,10 @@ public class TankScript : NetworkBehaviour
 
         if (!tankPlaced.Value && Physics.Raycast(ray, out hit, layerMask))
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("Node"))
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.CompareTag("Node") && canBePlaced)
             {
                 FirstNodeServerRpc(hit.collider.gameObject.GetComponent<Node>());
+                canBePlaced = false;
             }
         }
 
@@ -139,6 +145,7 @@ public class TankScript : NetworkBehaviour
             currentNode = nodee.NetworkObject;
             currentNode.GetComponent<Node>().isOccupied.Value = true;
             currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
+            AssignOwnerClientRpc(currentNode.GetComponent<Node>());
             this.transform.position = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
             tankPlaced.Value = true;
         }
@@ -174,13 +181,21 @@ public class TankScript : NetworkBehaviour
                 transform.rotation = Quaternion.LookRotation(newDirection + new Vector3(0, 180, 0));
 
                 PlayerCloseDetection.checkDistance?.Invoke();
+
                 currentNode.GetComponent<Node>().isOccupied.Value = false;
+                if (IsHost)
+                {
+                    currentNode.GetComponent<Node>().isOccupiedByHost.Value = false;
+                }
+                else if (!IsServer && IsClient && !IsHost)
+                    currentNode.GetComponent<Node>().isOccupiedByClient.Value = false;
                 currentNode.GetComponent<Node>().occupyingObject = null;
                 nodee.isOccupied.Value = true;
                 currentNode = nodee.NetworkObject;
                 currentNode.GetComponent<Node>().isOccupied.Value = true;
-                currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
+                AssignOwnerClientRpc(currentNode.GetComponent<Node>());
 
+                currentNode.GetComponent<Node>().occupyingObject = this.gameObject;
 
                 Vector3 destinationPos = currentNode.transform.position + new Vector3(0, .45f, 0.1f);
 
@@ -281,6 +296,22 @@ public class TankScript : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    void DontScanMeServerRpc(NetworkBehaviourReference noda)
+    {
+        DontScanMeClientRpc(noda);
+    }
+
+    [ClientRpc]
+    void DontScanMeClientRpc(NetworkBehaviourReference noda)
+    {
+        if (noda.TryGet<Node>(out Node node))
+        {
+            if (node.occupyingObject != null && node.occupyingObject != this.gameObject)
+                StartCoroutine(Warning.Instance.displayTime(3));
+
+        }
+    }
+    [ServerRpc(RequireOwnership = false)]
     void ServerCallingServerRpc(NetworkBehaviourReference objectHit)
     {
         NodeScanClientRpc(objectHit);
@@ -316,12 +347,15 @@ public class TankScript : NetworkBehaviour
                             }
                             else
                             {
-                                if (!IsOwner)
-                                {
-                                    StartCoroutine(Warning.Instance.displayTime(3));
-                                }
                                 originalColors[m] = materials[m].color;
                                 renderer1.materials[m].color = Color.blue;
+                                if (IsHost && IsServer && node.isOccupiedByClient.Value || !IsHost && node.isOccupiedByHost.Value)
+                                {
+                                    continue;
+                                }
+                               else
+                                    StartCoroutine(Warning.Instance.displayTime(3));
+                                                 
                             }
                         }
                         StartCoroutine(ResetColorsAfterDelay(materials, originalColors, 1.5f));
@@ -344,6 +378,12 @@ public class TankScript : NetworkBehaviour
     void ChangeTurnLogicServerRpc()
     {
         StartCoroutine(TurnChange());
+    }
+
+    IEnumerator CanPlaceTank()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canBePlaced = true;
     }
 
     IEnumerator TurnChange()
