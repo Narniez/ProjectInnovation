@@ -6,6 +6,7 @@ public class TextChange : NetworkBehaviour
     public TextMeshProUGUI onScreenInstructions;
     public GameObject tank;
     public GameObject tank2;
+    public GameObject zoomButton;
     TankScript tankS;
     TankScript tank2S;
     bool showText = false;
@@ -13,6 +14,7 @@ public class TextChange : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+        zoomButton = GameObject.FindGameObjectWithTag("ZoomB");
         tank = GameObject.FindGameObjectWithTag("tank1");
         tankS = tank.GetComponent<TankScript>();
 
@@ -27,6 +29,7 @@ public class TextChange : NetworkBehaviour
             }
             if (clientCounter == 2)
             {
+                zoomButton = GameObject.FindGameObjectWithTag("ZoomB");
                 tank2 = GameObject.FindGameObjectWithTag("tank2");
                 tank2S = tank2.GetComponent<TankScript>();
             }
@@ -39,18 +42,21 @@ public class TextChange : NetworkBehaviour
         {
             if (!ServerScript.instance.playerTurn.Value)
             {
-                if (clientCounter == 2 && !tankS.tankPlaced.Value)
+                if (!tankS.tankPlaced.Value)
                 {
                     onScreenInstructions.text = "Place your tank";
                 }
                 else
                 {
-                    if (IsHost && !tankS.hasMoved.Value && tankS.tankHealth.Value > 0)
+                    if (clientCounter == 2 && IsHost && tankS.tankPlaced.Value && tankS.tankHealth.Value > 0)
                     {
+                        Debug.Log("VLIZAM EY TUKA");
+                        zoomButton.SetActive(true);
                         onScreenInstructions.text = "You can now move 2 times";
                     }
                     if (IsHost && tankS.canShoot.Value)
                     {
+                        zoomButton.SetActive(false);
                         onScreenInstructions.text = "Time to shoot - select a tile to shoot and scan!";
                     }
                     if(IsHost && tankS.tankHealth.Value <= 0)
@@ -85,8 +91,10 @@ public class TextChange : NetworkBehaviour
                             onScreenInstructions.text = "You won!";
                         }
                         if (!tank2S.hasMoved.Value && tank2S.tankHealth.Value > 0) {
+                            zoomButton.SetActive(true);
                             onScreenInstructions.text = "You can now move 2 times";
                         } else if (tank2S.canShoot.Value) {
+                            zoomButton.SetActive(false);
                             onScreenInstructions.text = "Time to shoot - select a tile to shoot and scan!";
                         } else if(tank2S.tankHealth.Value > 0 && tankS.tankHealth.Value > 0){
                             onScreenInstructions.text = "Waiting for other player to finish turn";
@@ -94,19 +102,6 @@ public class TextChange : NetworkBehaviour
                     }
                 }
             }
-        }
-    }
-
-    void TextPerAction()
-    {
-        switch (ServerScript.instance.playerTurn.Value)
-        {
-            case (true):
-                onScreenInstructions.text = "Player 2's turn !";
-                break;
-            case (false):
-                onScreenInstructions.text = "Player 1's turn !";
-                break;
         }
     }
 }

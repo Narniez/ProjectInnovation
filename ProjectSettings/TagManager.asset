@@ -8,6 +8,7 @@ TagManager:
   - tank1
   - hearts
   - tank2
+  - ZoomB
   layers:
   - Default
   - TransparentFX
