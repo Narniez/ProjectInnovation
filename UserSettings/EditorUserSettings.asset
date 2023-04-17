@@ -7,14 +7,19 @@ EditorUserSettings:
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
 <<<<<<< refs/remotes/origin/Relay
+<<<<<<< refs/remotes/origin/Relay
       value: 0601575304000a09595b0f7013225b44454f1c292d2a706829784b6bbab0303d
 =======
       value: 5450020354075b59095c0e7241770d454f4f417a747f276274701f65e0e26d6b
 >>>>>>> Began Game Over Screen
+=======
+      value: 0601575304000a09595b0f7013225b44454f1c292d2a706829784b6bbab0303d
+>>>>>>> RelayFix, other fixes
       flags: 0
     RecentlyUsedSceneGuid-1:
       value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
+<<<<<<< refs/remotes/origin/Relay
 <<<<<<< refs/remotes/origin/Relay
 =======
     RecentlyUsedSceneGuid-2:
@@ -30,6 +35,8 @@ EditorUserSettings:
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
       flags: 0
+=======
+>>>>>>> RelayFix, other fixes
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

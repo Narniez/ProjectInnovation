@@ -38,6 +38,7 @@ public class RelayConnectionScript : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("A player logged in! " + AuthenticationService.Instance.PlayerId);
+            playerNameText[0].text = PlayerPrefs.GetString("nickname");
         };
 
         clienJoinButton.onClick.AddListener(JoinRelay);
