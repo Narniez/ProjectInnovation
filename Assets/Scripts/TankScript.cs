@@ -166,13 +166,6 @@ public class TankScript : NetworkBehaviour
                 {
                     hasMoved.Value = true;
                     canShoot.Value = true;
-                    //if (!ServerScript.instance.playerTurn.Value)
-                    //{
-                    //    //CameraBehaviour.instance.ChangeStatesPlayer1ClientRpc(StatesPlayer1.Attack);
-                    //}
-                    //else { CameraBehaviour.instance.ChangeStatesPlayer2ClientRpc(StatesPlayer2.Attack); }
-
-
                 }
             }
         }

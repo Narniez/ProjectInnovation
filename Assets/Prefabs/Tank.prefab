@@ -119,7 +119,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   explosion: {fileID: 6814719607927169929, guid: 2cdb87d05f2cf864eb3be0cb23bc5089, type: 3}
-  trail: {fileID: 8299804538703169724, guid: c007caec1a522574f8ade972c613ebeb, type: 3}
+  trail: {fileID: 8223204200625917696, guid: ca63acb0c79b1184cb47d060497eaca5, type: 3}
+  canInteract: 0
 --- !u!114 &5194654585556733493
 MonoBehaviour:
   m_ObjectHideFlags: 0
